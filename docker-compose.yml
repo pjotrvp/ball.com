@@ -1,0 +1,12 @@
+services:
+  order-service:
+    build:
+      context: .
+      dockerfile: ./order-service/Dockerfile
+    # image: order-service
+    container_name: ball.com
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - 8080:8080
