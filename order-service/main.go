@@ -18,7 +18,7 @@ func main() {
     router.GET("/products", getProducts)
     router.GET("/products/:id", getProductByID)
     router.POST("/products", postProduct)
-    router.Run("localhost:8080")
+    router.Run("0.0.0.0:8080")
 }
 
 var products = []product{
