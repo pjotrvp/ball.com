@@ -11,7 +11,7 @@ services:
       MYSQL_USER: administrator
       MYSQL_PASSWORD: password420
     ports:
-     - 3307:3306
+      - 3307:3306
     volumes:
       - mysql-write:/var/lib/mysql
 
@@ -47,16 +47,29 @@ services:
       - rabbitmq-data:/var/lib/rabbitmq
 
   order-service:
+    networks:
+      - ballcom
     build:
       context: .
       dockerfile: ./order-service/Dockerfile
-    # image: order-service
-    container_name: ball.com
-    restart: unless-stopped
-    env_file:
-      - .env
+    container_name: order-service
+    restart: always
     ports:
       - 8080:8080
+    depends_on:
+      - mysql-write
+      - mysql-read
+      - rabbitmq
+    environment:
+      MYSQL_HOST: mysql-write
+      MYSQL_PORT: 3306
+      MYSQL_USER: administrator
+      MYSQL_PASSWORD: password420
+      MYSQL_DATABASE: ballcom
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      RABBITMQ_USER: guest
+      RABBITMQ_PASSWORD: guest
 
 volumes:
   mysql-write:
