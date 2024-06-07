@@ -1,4 +1,51 @@
 services:
+  mysql-write:
+    networks:
+      - ballcom
+    image: mysql:latest
+    container_name: mysql-write
+    restart: always
+    environment:
+      MYSQL_ROOT_PW: rootpassword
+      MYSQL_DATABASE: ballcom
+      MYSQL_USER: administrator
+      MYSQL_PASSWORD: password420
+    ports:
+     - 3307:3306
+    volumes:
+      - mysql-write:/var/lib/mysql
+
+  mysql-read:
+    networks:
+      - ballcom
+    image: mysql:latest
+    container_name: mysql-read
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: ballcom
+      MYSQL_USER: administrator
+      MYSQL_PASSWORD: password420
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql-read:/var/lib/mysql
+
+  rabbitmq:
+    networks:
+      - ballcom
+    image: rabbitmq:3.7-management
+    container_name: rabbitmq-queue
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+
   order-service:
     build:
       context: .
@@ -10,3 +57,12 @@ services:
       - .env
     ports:
       - 8080:8080
+
+volumes:
+  mysql-write:
+  mysql-read:
+  rabbitmq-data:
+
+networks:
+  ballcom:
+    driver: bridge
