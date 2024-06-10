@@ -1,0 +1,5 @@
+﻿https://localhost:7089/api/Account/authenticateSupplier?apiKey=apikey1&name=Supplier1
+
+Code 200:
+
+Supplier is authorized.
