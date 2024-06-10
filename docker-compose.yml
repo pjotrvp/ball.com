@@ -96,6 +96,31 @@ services:
       RABBITMQ_USER: guest
       RABBITMQ_PASSWORD: guest
 
+  aspnet-core-api:
+    networks:
+     - ballcom
+    build:
+      context: .
+      dockerfile: ./account-service/AccountService/Dockerfile
+    container_name: account-service
+    restart: always
+    ports:
+     - 5001:80
+    depends_on:
+      - mysql-write
+      - mysql-read
+      - rabbitmq
+    environment:
+      MYSQL_HOST: mysql-write
+      MYSQL_PORT: 3306
+      MYSQL_USER: administrator
+      MYSQL_PASSWORD: password420
+      MYSQL_DATABASE: ballcom
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      RABBITMQ_USER: guest
+      RABBITMQ_PASSWORD: guest
+
 volumes:
   mysql-write:
   mysql-read:
