@@ -90,15 +90,11 @@ func main() {
 
 	router := gin.Default()
 
-    router.GET("/products", func(ctx *gin.Context) {
-        ctx.JSON(200, productController.FindAll())
-    })
-
-    router.GET("/products/:id", func(ctx *gin.Context) {
-        ctx.JSON(200, productController.FindByID(ctx.Param("id")))
-    })
-
 	router.POST("/orders", orderController.CreateOrder)
+	router.GET("/orders/:id", orderController.GetOrder)
+	router.GET("/orders", orderController.GetOrders)
+	router.PUT("/orders/:id", orderController.UpdateOrder)
+	router.DELETE("/orders/:id", orderController.DeleteOrder)
 
     router.POST("/events", func(c *gin.Context) {
 		var ev entities.Event

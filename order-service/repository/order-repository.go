@@ -22,7 +22,15 @@ func (r *OrderRepository) CreateOrder(order entities.Order) (int64, error) {
 	return orderID, nil
 }
 
-func (r *OrderRepository) GetOrderById(id int) (entities.Order, error) {
+func (r *OrderRepository) UpdateOrder(order entities.Order) error {
+	_, err := r.DB.Exec("UPDATE orders SET product_ids = ?, total = ? WHERE id = ?", order.ProductIDs, order.TotalPrice, order.ID)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func (r *OrderRepository) GetOrderById(id string) (entities.Order, error) {
 	var order entities.Order
 	err := r.DB.QueryRow("SELECT id, product_ids, total FROM orders WHERE id = ?", id).Scan(&order.ID, &order.ProductIDs, &order.TotalPrice)
 	if err != nil {
@@ -48,4 +56,12 @@ func (r *OrderRepository) GetOrders() ([]entities.Order, error) {
 		orders = append(orders, order)
 	}
 	return orders, nil
+}
+
+func (r *OrderRepository) DeleteOrder(id string) error {
+	_, err := r.DB.Exec("DELETE FROM orders WHERE id = ?", id)
+	if err != nil {
+		return err
+	}
+	return nil
 }
