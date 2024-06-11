@@ -96,13 +96,13 @@ services:
       RABBITMQ_USER: guest
       RABBITMQ_PASSWORD: guest
 
-  customer-data-service:
+  invoice-service:
     networks:
      - ballcom
     build:
      context: .
-     dockerfile: ./customer-data-service/Dockerfile
-    container_name: customer-data-service
+     dockerfile: ./invoice-service/Dockerfile
+    container_name: invoice-service
     restart: always
     ports:
      - 5000:5000
