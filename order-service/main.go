@@ -7,8 +7,10 @@ import (
 	"net/http"
 	"order-service/order-service/controller"
 	"order-service/order-service/entities"
+	"order-service/order-service/event"
+	"order-service/order-service/repository"
 	"order-service/order-service/services"
-    "order-service/order-service/event"
+	"time"
 
 	"os"
 
@@ -23,7 +25,7 @@ var (
 )
 
 func main() {
-    router := gin.Default()
+    
 
     mysqlUser := os.Getenv("MYSQL_USER")
     mysqlPassword := os.Getenv("MYSQL_PASSWORD")
@@ -46,19 +48,28 @@ func main() {
 
     rabbitCon := fmt.Sprintf("amqp://%s:%s@%s:%s/", rabbitUser, rabbitPassword, rabbitHost, rabbitPort)
 
-    conn, err := amqp.Dial(rabbitCon)
+    // Retry connecting to RabbitMQ
+	var conn *amqp.Connection
+	for i := 0; i < 10; i++ {
+		conn, err = amqp.Dial(rabbitCon)
+		if err == nil {
+			break
+		}
+		log.Printf("Could not connect to RabbitMQ (attempt %d/10): %v", i+1, err)
+		time.Sleep(5 * time.Second)
+	}
 	if err != nil {
 		log.Fatalf("Could not connect to RabbitMQ: %v", err)
 	}
 	defer conn.Close()
 
-    ch, err := conn.Channel()
+	ch, err := conn.Channel()
 	if err != nil {
 		log.Fatalf("Could not open a channel: %v", err)
 	}
 	defer ch.Close()
 
-    err = ch.ExchangeDeclare(
+	err = ch.ExchangeDeclare(
 		"events",  // name
 		"fanout",  // type
 		true,      // durable
@@ -71,13 +82,19 @@ func main() {
 		log.Fatalf("Could not declare exchange: %v", err)
 	}
 
-    router.GET("/products", func(ctx *gin.Context) {
-        ctx.JSON(200, productController.FindAll())
-    })
+	orderRepo := repository.OrderRepository{DB: db}
 
-    router.GET("/products/:id", func(ctx *gin.Context) {
-        ctx.JSON(200, productController.FindByID(ctx.Param("id")))
-    })
+	orderService := services.OrderService{OrderRepo: orderRepo}
+
+	orderController := controller.OrderController{OrderService: orderService}
+
+	router := gin.Default()
+
+	router.POST("/orders", orderController.CreateOrder)
+	router.GET("/orders/:id", orderController.GetOrder)
+	router.GET("/orders", orderController.GetOrders)
+	router.PUT("/orders/:id", orderController.UpdateOrder)
+	router.DELETE("/orders/:id", orderController.DeleteOrder)
 
     router.POST("/events", func(c *gin.Context) {
 		var ev entities.Event
