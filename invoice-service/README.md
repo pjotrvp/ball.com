@@ -1,4 +1,4 @@
-In customer-data-service follow these steps to run the app without docker
+In invoice-service follow these steps to run the app without docker
 
 1)  in shell :  python -m venv venv
 2)  in shell :  venv\Scripts\activate
