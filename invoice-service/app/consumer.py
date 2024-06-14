@@ -1,5 +1,5 @@
-from flask import Flask
-import pika
+from flask import Flask # type: ignore
+import pika # type: ignore
 import json
 
 RABBITMQ_HOST = 'localhost'

@@ -1,5 +1,5 @@
-from flask import Flask, jsonify, request
-import pika
+from flask import Flask, jsonify, request # type: ignore
+import pika # type: ignore
 import json
 
 app = Flask(__name__)
@@ -49,6 +49,8 @@ def hello_world():
 
 @app.route('/invoice', methods=['GET'])
 def getInvoices():
+    test = [1,2,3,4,5]
+    send_to_queue(test)
     return jsonify({"message": "Get invoices called"})
 
 
@@ -74,3 +76,4 @@ def delInvoice():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+    

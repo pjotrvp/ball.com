@@ -6,7 +6,7 @@ services:
     container_name: mysql-write
     restart: always
     environment:
-      MYSQL_ROOT_PW: rootpassword
+      MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: ballcom
       MYSQL_USER: administrator
       MYSQL_PASSWORD: password420
