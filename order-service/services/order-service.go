@@ -4,33 +4,58 @@ import (
 	"encoding/json"
 	"errors"
 	"io"
+	"log"
 	"net/http"
+	"time"
+
+	"github.com/google/uuid"
 
 	"order-service/order-service/entities"
+	"order-service/order-service/event"
 	"order-service/order-service/repository"
 )
 
 type OrderService struct {
-	OrderRepo repository.OrderRepository
+	OrderRepo  repository.OrderRepository
+	EventStore event.EventStore
+	EventBus   event.EventBus
 }
 
-func (s *OrderService) CreateOrder(ProductIDs []string) (int64, error) {
+func (s *OrderService) CreateOrder(orderItems []entities.OrderItem, customerID int64) (int64, error) {
 	// Fetch product details from another microservice
-	products, err := s.fetchProductDetails(ProductIDs)
+	productIDs := make([]string, len(orderItems))
+	for i, item := range orderItems {
+		productIDs[i] = item.ProductID
+	}
+
+	products, err := s.fetchProductDetails(productIDs)
 	if err != nil {
 		return 0, err
 	}
 
 	// Calculate the total price
 	totalPrice := 0.0
+	productMap := make(map[string]float64)
 	for _, product := range products {
-		totalPrice += product.Price
+		productMap[product.ID] = product.Price
+	}
+
+	for _, item := range orderItems {
+		price, exists := productMap[item.ProductID]
+		if !exists {
+			return 0, errors.New("product not found")
+		}
+		totalPrice += price * float64(item.Quantity)
 	}
 
 	// Create order entity
 	order := entities.Order{
-		ProductIDs: ProductIDs,
-		TotalPrice: totalPrice,
+		OrderItems:  orderItems,
+		TotalPrice:  totalPrice,
+		CustomerID:  customerID,
+		IsPaid:      false,
+		CreatedAt:   time.Now(),
+		LastUpdated: time.Now(),
 	}
 
 	// Save order using repository
@@ -39,10 +64,29 @@ func (s *OrderService) CreateOrder(ProductIDs []string) (int64, error) {
 		return 0, err
 	}
 
+	payload, err := json.Marshal(order)
+	if err != nil {
+		log.Fatalf("Error serializing order to JSON: %v", err)
+	}
+
+	event := event.Event{
+		EventID:   uuid.NewString(),
+		OrderID:   orderID,
+		EventType: "OrderCreated",
+		Payload:   payload,
+		CreatedAt: time.Now(),
+	}
+	err = s.EventStore.SaveEvent(event)
+	if err != nil {
+		return 0, err
+	}
+
+	s.EventBus.PublishOrderCreated(orderID)
+
 	return orderID, nil
 }
 
-func (s *OrderService) GetOrder(id string) (entities.Order, error) {
+func (s *OrderService) GetOrder(id int64) (entities.Order, error) {
 	// Fetch order by ID using repository
 	order, err := s.OrderRepo.GetOrderById(id)
 	if err != nil {
@@ -66,12 +110,46 @@ func (s *OrderService) UpdateOrder(order entities.Order) error {
 	if err != nil {
 		return err
 	}
+
+	payload, err := json.Marshal(order)
+	if err != nil {
+		log.Fatalf("Error serializing order to JSON: %v", err)
+	}
+
+	event := event.Event{
+		EventID:   uuid.NewString(),
+		OrderID:   order.ID,
+		EventType: "OrderUpdated",
+		Payload:   payload,
+		CreatedAt: time.Now(),
+	}
+
+	err = s.EventStore.SaveEvent(event)
+	if err != nil {
+		return err
+	}
+
+	s.EventBus.PublishOrderUpdated(order.ID)
+
 	return nil
 }
 
-func (s *OrderService) DeleteOrder(id string) error {
+func (s *OrderService) DeleteOrder(id int64) error {
 	// Delete order using repository
 	err := s.OrderRepo.DeleteOrder(id)
+	if err != nil {
+		return err
+	}
+
+	event := event.Event{
+		EventID:   uuid.NewString(),
+		OrderID:   id,
+		EventType: "OrderDeleted",
+		Payload:   nil,
+		CreatedAt: time.Now(),
+	}
+
+	err = s.EventStore.SaveEvent(event)
 	if err != nil {
 		return err
 	}

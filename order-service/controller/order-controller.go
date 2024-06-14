@@ -3,6 +3,8 @@ package controller
 import (
 	"order-service/order-service/entities"
 	"order-service/order-service/services"
+	"strconv"
+	"time"
 
 	"github.com/gin-gonic/gin"
 )
@@ -11,9 +13,10 @@ type OrderController struct {
 	OrderService services.OrderService
 }
 
-func (ctrl *OrderController) CreateOrder(c *gin.Context){
+func (ctrl *OrderController) CreateOrder(c *gin.Context) {
 	var req struct {
-		ProductIDs []string `json:"productIDs"`
+		OrderItems []entities.OrderItem `json:"orderItems"`
+		CustomerID int64                `json:"customerID"`
 	}
 
 	if err := c.ShouldBindJSON(&req); err != nil {
@@ -21,7 +24,7 @@ func (ctrl *OrderController) CreateOrder(c *gin.Context){
 		return
 	}
 
-	orderID, err := ctrl.OrderService.CreateOrder(req.ProductIDs)
+	orderID, err := ctrl.OrderService.CreateOrder(req.OrderItems, req.CustomerID)
 	if err != nil {
 		c.JSON(500, gin.H{"error": err.Error()})
 		return
@@ -30,10 +33,16 @@ func (ctrl *OrderController) CreateOrder(c *gin.Context){
 	c.JSON(200, gin.H{"orderID": orderID})
 }
 
-func (ctrl *OrderController) GetOrder(c *gin.Context){
+func (ctrl *OrderController) GetOrder(c *gin.Context) {
 	orderID := c.Param("id")
+	
+	orderIDInt64, err := strconv.ParseInt(orderID, 10, 64)
+	if err != nil {
+		c.JSON(400, gin.H{"error": "Invalid order ID"})
+		return
+	}
 
-	order, err := ctrl.OrderService.GetOrder(orderID)
+	order, err := ctrl.OrderService.GetOrder(orderIDInt64)
 	if err != nil {
 		c.JSON(500, gin.H{"error": err.Error()})
 		return
@@ -42,7 +51,7 @@ func (ctrl *OrderController) GetOrder(c *gin.Context){
 	c.JSON(200, order)
 }
 
-func (ctrl *OrderController) GetOrders(c *gin.Context){
+func (ctrl *OrderController) GetOrders(c *gin.Context) {
 	orders, err := ctrl.OrderService.GetOrders()
 	if err != nil {
 		c.JSON(500, gin.H{"error": err.Error()})
@@ -52,10 +61,13 @@ func (ctrl *OrderController) GetOrders(c *gin.Context){
 	c.JSON(200, orders)
 }
 
-func (ctrl *OrderController) UpdateOrder(c *gin.Context){
+func (ctrl *OrderController) UpdateOrder(c *gin.Context) {
 	var req struct {
-		ID string `json:"id"`
-		ProductIDs []string `json:"productIDs"`
+		ID         int64                `json:"id"`
+		OrderItems []entities.OrderItem `json:"orderItems"`
+		TotalPrice float64              `json:"totalPrice"`
+		CustomerID int64               `json:"customerID"`
+		IsPaid     bool                 `json:"isPaid"`
 	}
 
 	if err := c.ShouldBindJSON(&req); err != nil {
@@ -64,8 +76,12 @@ func (ctrl *OrderController) UpdateOrder(c *gin.Context){
 	}
 
 	order := entities.Order{
-		ID: req.ID,
-		ProductIDs: req.ProductIDs,
+		ID:         req.ID,
+		OrderItems: req.OrderItems,
+		TotalPrice: req.TotalPrice,
+		CustomerID: req.CustomerID,
+		IsPaid:     req.IsPaid,
+		LastUpdated: time.Now(), // Make sure to update the LastUpdated field
 	}
 
 	err := ctrl.OrderService.UpdateOrder(order)
@@ -77,10 +93,16 @@ func (ctrl *OrderController) UpdateOrder(c *gin.Context){
 	c.JSON(200, gin.H{"message": "Order updated successfully"})
 }
 
-func (ctrl *OrderController) DeleteOrder(c *gin.Context){
+func (ctrl *OrderController) DeleteOrder(c *gin.Context) {
 	orderID := c.Param("id")
 
-	err := ctrl.OrderService.DeleteOrder(orderID)
+	orderIDInt64, err := strconv.ParseInt(orderID, 10, 64)
+	if err != nil {
+		c.JSON(400, gin.H{"error": "Invalid order ID"})
+		return
+	}
+
+	err = ctrl.OrderService.DeleteOrder(orderIDInt64)
 	if err != nil {
 		c.JSON(500, gin.H{"error": err.Error()})
 		return
