@@ -1,15 +1,13 @@
-FROM node:12-alpine3.14
+FROM node:16-alpine
 
-RUN mkdir /app
-ADD ./inventory-service/. /app
 WORKDIR /app
 
-COPY package*.json ./
+COPY inventory-service/package*.json .
 
 RUN npm install
 
-COPY . .
+COPY inventory-service/ .
 
 EXPOSE 9090
 
-CMD [ "node", "app.js" ]
+CMD [ "npm", "run", "start" ]
