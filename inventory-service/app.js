@@ -1,10 +1,14 @@
 const express = require('express')
+const { seed } = require('./pool')
 const bodyParser = require('body-parser')
+require('dotenv').config()
 
 const productRoutes = require('./src/routes/product.routes')
 
 const app = express()
-const port = 9090
+const port = process.env.NODE_DOCKER_PORT || 9090
+
+seed()
 
 app.use(bodyParser.json())
 
