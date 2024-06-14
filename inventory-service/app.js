@@ -1,7 +1,7 @@
+require('dotenv').config()
 const express = require('express')
 const { seed } = require('./pool')
 const bodyParser = require('body-parser')
-require('dotenv').config()
 
 const productRoutes = require('./src/routes/product.routes')
 

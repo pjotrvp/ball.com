@@ -1,3 +1,5 @@
+const { readPool, writePool } = require('../../pool')
+
 const products = {
     1: {
         id: 1,
@@ -9,7 +11,19 @@ const products = {
 
 const getProducts = async (req, res, next) => {
     try {
-        res.status(200).json(products)
+        readPool.getConnection((err, connection) => {
+            if (err) {
+                connection.release()
+                throw err
+            }
+
+            connection.query('SELECT * FROM products', (error, results, fields) => {
+                connection.release()
+                if (error) throw error
+
+                res.status(200).json(results)
+            })
+        })
     } catch (error) {
         next({ status: 404, message: error.message })
     }
