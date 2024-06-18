@@ -1,5 +1,10 @@
 class Config:
-    RABBITMQ_HOST = 'localhost'
-    RABBITMQ_USER = 'user'
-    RABBITMQ_PASSWORD = 'password'
-    RABBITMQ_QUEUE = 'test_queue'
+    MYSQL_HOST = 'mysql-write'
+    MYSQL_PORT = 3306
+    MYSQL_USER = 'administrator'
+    MYSQL_PASSWORD = 'password420'
+    MYSQL_DATABASE = 'ballcom'
+    RABBITMQ_HOST = 'rabbitmq'
+    RABBITMQ_PORT = 5672
+    RABBITMQ_USER = 'guest'
+    RABBITMQ_PASSWORD = 'guest'
