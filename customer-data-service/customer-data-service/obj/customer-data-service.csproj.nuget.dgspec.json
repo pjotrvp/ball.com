@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\customer-data-service\\customer-data-service\\customer-data-service.csproj": {}
+    "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-data-service\\customer-data-service\\customer-data-service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\customer-data-service\\customer-data-service\\customer-data-service.csproj": {
+    "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-data-service\\customer-data-service\\customer-data-service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\customer-data-service\\customer-data-service\\customer-data-service.csproj",
+        "projectUniqueName": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-data-service\\customer-data-service\\customer-data-service.csproj",
         "projectName": "customer-data-service",
-        "projectPath": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\customer-data-service\\customer-data-service\\customer-data-service.csproj",
+        "projectPath": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-data-service\\customer-data-service\\customer-data-service.csproj",
         "packagesPath": "C:\\Users\\dierc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\customer-data-service\\customer-data-service\\obj\\",
+        "outputPath": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-data-service\\customer-data-service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
