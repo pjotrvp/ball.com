@@ -4,7 +4,7 @@ class Config:
     MYSQL_USER = 'administrator'
     MYSQL_PASSWORD = 'password420'
     MYSQL_DATABASE = 'ballcom'
-    RABBITMQ_HOST = 'rabbitmq'
+    RABBITMQ_HOST = 'my-rabbit'
     RABBITMQ_PORT = 5672
     RABBITMQ_USER = 'guest'
     RABBITMQ_PASSWORD = 'guest'
