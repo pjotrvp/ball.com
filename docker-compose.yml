@@ -42,7 +42,7 @@ services:
       - 15672:15672
     environment:
       - RABBITMQ_DEFAULT_USER=guest
-      - RABBITMQ_DEFAULT_PASS=guest
+      - RABBITMQ_DEFAULT_PASSWORD=guest
     volumes:
       - rabbitmq-data:/var/lib/rabbitmq
 
@@ -136,7 +136,32 @@ services:
       RABBITMQ_USER: guest
       RABBITMQ_PASSWORD: guest
 
-  
+  customer-data-service:
+    networks:
+     - ballcom
+    build:
+     context: ./customer-data-service/customer-data-service
+     dockerfile: Dockerfile
+    container_name: customer-data-service
+    restart: always
+    ports:
+     - 5002:5000
+    depends_on:
+      - mysql-write
+      - mysql-read
+      - rabbitmq
+    environment:
+      MYSQL_HOST: mysql-write
+      MYSQL_PORT: 3306
+      MYSQL_USER: administrator
+      MYSQL_PASSWORD: password420
+      MYSQL_DATABASE: ballcom
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      RABBITMQ_USER: guest
+      RABBITMQ_PASSWORD: guest
+
+
 volumes:
   mysql-write:
   mysql-read:
