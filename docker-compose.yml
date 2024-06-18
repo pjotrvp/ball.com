@@ -64,18 +64,18 @@ services:
   order-service:
     networks:
       - ballcom
-    build:
-      context: .
-      dockerfile: ./order-service/Dockerfile
+    build: ./order-management
     container_name: order-service
     restart: always
     ports:
-      - 8080:8080
+      - 3000:3000
     depends_on:
       - mysql-write
       - mysql-read
       - rabbitmq
+      - eventstoredb
     environment:
+      NODE_ENV: production
       MYSQL_HOST: mysql-write
       MYSQL_PORT: 3306
       MYSQL_USER: administrator
