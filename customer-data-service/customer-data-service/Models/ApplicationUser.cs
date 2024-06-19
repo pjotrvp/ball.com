@@ -1,15 +1,17 @@
-﻿namespace customer_data_service.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace customer_data_service.Models
 {
-    public class Customer
+    public class ApplicationUser:IdentityUser
     {
-        public int Id { get; set; }
         public string CompanyName { get; set; }
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
         public string Address { get; set; }
-        public string? Email { get; set; }
+
+
 
     }
 }

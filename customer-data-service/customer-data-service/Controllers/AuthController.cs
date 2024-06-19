@@ -17,7 +17,7 @@ namespace customer_data_service.Controllers
             _authService = authService;
         }
         [HttpPost("Register")]
-        public async Task<IActionResult> RegisterUser(LoginModel user)
+        public async Task<IActionResult> RegisterUser(RegisterModel user)
         {
             if(await _authService.RegisterUser(user))
             {

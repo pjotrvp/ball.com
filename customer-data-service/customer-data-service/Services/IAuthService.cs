@@ -6,6 +6,6 @@ namespace customer_data_service.Services
     {
         string GenerateTokenString(LoginModel user);
         Task<bool> Login(LoginModel user);
-        Task<bool> RegisterUser(LoginModel user);
+        Task<bool> RegisterUser(RegisterModel user);
     }
 }

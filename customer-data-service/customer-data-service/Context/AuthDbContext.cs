@@ -4,13 +4,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace customer_data_service.Context
 {
-    public class AuthDbContext:IdentityDbContext
+    public class AuthDbContext : IdentityDbContext<ApplicationUser>
     {
-        public AuthDbContext(DbContextOptions options):base (options) 
-        { 
-
+        public AuthDbContext(DbContextOptions<AuthDbContext> options)
+            : base(options)
+        {
         }
+        public DbSet<Customer> Customers { get; set; }
 
-        //public DbSet<Customer> Customers { get; set; }
     }
 }
+

@@ -8,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using static Org.BouncyCastle.Math.EC.ECCurve;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using customer_data_service.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +21,7 @@ builder.Services.AddDbContext<AuthDbContext>(options =>
 
 builder.Services.AddControllers();
 builder.Services.AddSingleton<ICustomerService, CustomerService>();
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     options.Password.RequiredLength = 5;
 }).AddEntityFrameworkStores<AuthDbContext>()

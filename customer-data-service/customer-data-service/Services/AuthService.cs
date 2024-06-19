@@ -9,22 +9,29 @@ namespace customer_data_service.Services
 {
     public class AuthService : IAuthService
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly IConfiguration _config;
 
-        public AuthService(UserManager<IdentityUser> userManager, IConfiguration config)
+        public AuthService(UserManager<ApplicationUser> userManager, IConfiguration config)
         {
             _userManager = userManager;
             _config = config;
         }
 
       
-        public async Task<bool> RegisterUser(LoginModel user)
+        public async Task<bool> RegisterUser(RegisterModel user)
         {
-            var identityUser = new IdentityUser
+            var identityUser = new ApplicationUser
             {
-                UserName = user.UserName,
-                Email = user.UserName
+                CompanyName = user.CompanyName,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                PhoneNumber = user.PhoneNumber,
+                Address = user.Address,
+                UserName = user.Email,
+                Email = user.Email
+
+
             };
 
             var result = await _userManager.CreateAsync(identityUser, user.Password);
@@ -32,7 +39,7 @@ namespace customer_data_service.Services
         }
         public async Task<bool> Login(LoginModel user)
         {
-            var identityUser = await _userManager.FindByNameAsync(user.UserName);
+            var identityUser = await _userManager.FindByNameAsync(user.Email);
             if (identityUser == null)
             {
                 return false;
@@ -45,7 +52,7 @@ namespace customer_data_service.Services
         {
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Email, user.UserName),
+                new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.Role,"Admin"),
             };
 
