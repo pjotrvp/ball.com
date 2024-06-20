@@ -171,3 +171,4 @@ C:\Users\dierc\OneDrive\Bureaublad\ball.com\ball.com\customer-data-service\custo
 C:\Users\dierc\OneDrive\Bureaublad\ball.com\ball.com\customer-data-service\customer-data-service\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\dierc\OneDrive\Bureaublad\ball.com\ball.com\customer-data-service\customer-data-service\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\dierc\OneDrive\Bureaublad\ball.com\ball.com\customer-data-service\customer-data-service\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\dierc\OneDrive\Bureaublad\ball.com\ball.com\customer-data-service\customer-data-service\bin\Debug\net8.0\CsvHelper.dll

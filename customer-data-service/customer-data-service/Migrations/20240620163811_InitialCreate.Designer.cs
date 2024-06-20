@@ -11,8 +11,8 @@ using customer_data_service.Context;
 namespace customer_data_service.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20240619171657_Initial")]
-    partial class Initial
+    [Migration("20240620163811_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -243,6 +243,9 @@ namespace customer_data_service.Migrations
 
                     b.Property<string>("CompanyName")
                         .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Email")
                         .HasColumnType("longtext");
 
                     b.Property<string>("FirstName")

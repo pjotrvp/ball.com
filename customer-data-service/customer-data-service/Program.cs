@@ -20,7 +20,7 @@ builder.Services.AddDbContext<AuthDbContext>(options =>
 });
 
 builder.Services.AddControllers();
-builder.Services.AddSingleton<ICustomerService, CustomerService>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     options.Password.RequiredLength = 5;
