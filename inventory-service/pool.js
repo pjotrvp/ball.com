@@ -13,7 +13,7 @@ const seedQuery = `CREATE TABLE IF NOT EXISTS products (
     stock INT NOT NULL
 );`
 
-const seed = () => {
+const seedDatabases = () => {
     writePool.getConnection((err, connection) => {
         if (err) throw err;
         console.log('Connected to the write database')
@@ -54,5 +54,5 @@ const seed = () => {
 module.exports = {
     writePool,
     readPool,
-    seed,
+    seedDatabases,
 }

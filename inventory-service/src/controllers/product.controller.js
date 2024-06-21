@@ -1,5 +1,6 @@
 const { readPool, writePool } = require('../../pool')
-const RabbitMQPublisher = require('../messaging/rabbitmq.publisher')
+const RabbitMQPublisher = require('../services/rabbitmq/publisher.service')
+const publisher = new RabbitMQPublisher()
 
 const getProducts = async (req, res, next) => {
     try {
@@ -51,7 +52,7 @@ const createProduct = async (req, res, next) => {
             if (!results.insertId) return next({ status: 404, message: 'Product not created' })
 
             const command = { type: 'CreateProduct', payload: { id: results.insertId, name, description, price, stock } }
-            RabbitMQPublisher.publish(command)
+            publisher.publish(command)
 
             res.status(200).json({ id: results.insertId, message: 'Product created' })
         })
@@ -74,7 +75,7 @@ const updateProduct = async (req, res, next) => {
             if (results.affectedRows < 1) return next({ status: 404, message: 'Product not found' })
 
             const command = { type: 'UpdateProduct', payload: { id, name, description, price, stock } }
-            RabbitMQPublisher.publish(command)
+            publisher.publish(command)
 
             res.status(200).json({ message: 'Product updated' })
         })
@@ -96,7 +97,7 @@ const deleteProduct = async (req, res, next) => {
             if (results.affectedRows < 1) return next({ status: 404, message: 'Product not found' })
 
             const command = { type: 'DeleteProduct', payload: { id } }
-            RabbitMQPublisher.publish(command)
+            publisher.publish(command)
 
             res.status(200).json({ message: 'Product deleted' })
         })

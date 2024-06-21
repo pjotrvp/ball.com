@@ -1,14 +1,15 @@
 require('dotenv').config()
 const express = require('express')
-const { seed } = require('./pool')
+const { seedDatabases } = require('./pool')
 const bodyParser = require('body-parser')
-const RabbitMQConsumer = require('./src/messaging/rabbitmq.consumer')
+const RabbitMQConsumer = require('./src/services/rabbitmq/consumer.service')
 const productRoutes = require('./src/routes/product.routes')
 
 const app = express()
 const port = process.env.NODE_DOCKER_PORT || 9090
 
-seed()
+seedDatabases()
+new RabbitMQConsumer().connectAndListen()
 
 app.use(bodyParser.json())
 
@@ -23,8 +24,5 @@ app.use((err, req, res, next) => {
 })
 
 app.listen(port, () => {
-  const consumer = new RabbitMQConsumer();
-  consumer.listen();
-
   console.log(`Inventory service initiated on port ${port}`)
 })

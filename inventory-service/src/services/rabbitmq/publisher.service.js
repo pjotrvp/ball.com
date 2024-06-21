@@ -1,13 +1,17 @@
 const amqp = require("amqplib/callback_api");
+const rabbitmqConfig = require("../../configs/rabbitmq.config");
 
 class RabbitMQPublisher {
-  constructor() {
+  constructor(url, queue) {
     this.channel = null;
-    this.init();
+    this.url = url || rabbitmqConfig.url;
+    this.queue = queue || rabbitmqConfig.queue;
+
+    this.connect();
   }
 
-  init() {
-    amqp.connect("amqp://rabbitmq-queue", (errorConnect, connection) => {
+  connect() {
+    amqp.connect(this.url, (errorConnect, connection) => {
       if (errorConnect) {
         throw errorConnect;
       }
@@ -17,8 +21,7 @@ class RabbitMQPublisher {
           throw errorChannel;
         }
 
-        const queue = "inventory_queue";
-        channel.assertQueue(queue, {
+        channel.assertQueue(this.queue, {
           durable: true,
         });
 
@@ -27,19 +30,18 @@ class RabbitMQPublisher {
     });
   }
 
-  publish(command) {
+  publish(message) {
     if (!this.channel) {
       console.log("[=>] Channel not yet initialized. Try again.");
       return;
     }
 
-    const queue = "inventory_queue";
-    this.channel.sendToQueue(queue, Buffer.from(JSON.stringify(command)), {
+    this.channel.sendToQueue(this.queue, Buffer.from(JSON.stringify(message)), {
       persistent: true,
     });
 
-    console.log("[=>] Sent %s to queue", JSON.stringify(command));
+    console.log("[=>] Sent %s to queue", message);
   }
 }
 
-module.exports = new RabbitMQPublisher();
+module.exports = RabbitMQPublisher;
