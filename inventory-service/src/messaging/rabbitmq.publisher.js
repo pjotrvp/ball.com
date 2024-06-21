@@ -27,18 +27,18 @@ class RabbitMQPublisher {
     });
   }
 
-  publish(message) {
+  publish(command) {
     if (!this.channel) {
       console.log("[=>] Channel not yet initialized. Try again.");
       return;
     }
 
     const queue = "inventory_queue";
-    this.channel.sendToQueue(queue, Buffer.from(message), {
+    this.channel.sendToQueue(queue, Buffer.from(JSON.stringify(command)), {
       persistent: true,
     });
 
-    console.log("[=>] Sent %s to queue", message);
+    console.log("[=>] Sent %s to queue", JSON.stringify(command));
   }
 }
 
