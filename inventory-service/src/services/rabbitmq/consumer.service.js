@@ -1,5 +1,6 @@
 const amqp = require("amqplib/callback_api");
 const rabbitmqConfig = require("../../configs/rabbitmq.config");
+const eventHandler = require("../../handlers/event.handler");
 
 class RabbitMQConsumer {
   constructor(url, queue) {
@@ -45,26 +46,12 @@ class RabbitMQConsumer {
   }
 
   consume(channel) {
-    channel.consume(this.queue, (message) => {
+    channel.consume(this.queue, async (message) => {
         if (!message) return;
         const command = JSON.parse(message.content.toString());
 
         try {
-          switch (command.type) {
-            case "CreateProduct":
-              console.log("[W | <=] Received command: ", command);
-              break;
-            case "UpdateProduct":
-              console.log("[W | <=] Received command: ", command);
-              break;
-            case "DeleteProduct":
-              console.log("[W | <=] Received command: ", command);
-              break;
-            default:
-              console.log("[W | <=] Unknown command type: ", command.type);
-              break;
-          }
-
+          await eventHandler.handleEvent(command);
           channel.ack(message);
         } catch (error) {
           console.error("[W | <=] Error processing command: ", error.message);

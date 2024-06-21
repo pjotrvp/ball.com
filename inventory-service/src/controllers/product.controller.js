@@ -1,17 +1,12 @@
 const { readPool, writePool } = require('../../pool')
+const readService = require('../services/databases/read.service')
 const RabbitMQPublisher = require('../services/rabbitmq/publisher.service')
 const publisher = new RabbitMQPublisher()
 
 const getProducts = async (req, res, next) => {
     try {
-        readPool.query('SELECT * FROM products', (error, results, fields) => {
-            connection.release()
-            if (error) throw error
-
-            if (results.length === 0) return next({ status: 404, message: 'No products found' })
-
-            res.status(200).json(results)
-        })
+        const products = await readService.getAllProducts()
+        res.status(200).json(products)
     } catch (error) {
         next({ status: 404, message: error.message })
     }
@@ -21,14 +16,8 @@ const getProduct = async (req, res, next) => {
     const { id } = req.params
 
     try {
-        readPool.query('SELECT * FROM products WHERE id = ?', [id], (error, results, fields) => {
-            connection.release()
-            if (error) throw error
-
-            if (results.length === 0) return next({ status: 404, message: 'Product not found' })
-
-            res.status(200).json(results)
-        })
+        const product = await readService.getProductById(id)
+        res.status(200).json(product)
     } catch (error) {
         next({ status: 404, message: error.message })
     }
