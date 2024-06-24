@@ -65,9 +65,9 @@ module.exports = {
     const customerId = req.customerId;
     let orderId = uuid.v4();
     let totalPrice = 0;
-    // make axios get request to http://localhost:3001/api/shopping-cart with authorization header same as this request
+    
     await axios
-      .get("http://customer-management:3001/api/shopping-cart", {
+      .get("http://customer-management:5002/api/shopping-cart", {
         headers: {
           Authorization: req.headers.authorization,
         },
