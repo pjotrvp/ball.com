@@ -17,8 +17,13 @@ class RabbitMQManager {
           throw errorChannel;
         }
 
-        const queue = "order_queue";
-        channel.assertQueue(queue, {
+        const dbQueue = "db_order_queue";
+        const regularQueue = "order_queue";
+        channel.assertQueue(dbQueue, {
+          durable: true,
+        });
+
+        channel.assertQueue(regularQueue, {
           durable: true,
         });
 
@@ -33,8 +38,36 @@ class RabbitMQManager {
       return;
     }
 
-    const queue = "order_queue";
+    const queue = "db_order_queue";
     this.channel.sendToQueue(queue, Buffer.from(message), {
+      persistent: true,
+    });
+
+    console.log("[=>] Sent %s to queue", message);
+  }
+
+  addInventoryMessage(message) {
+    if (!this.channel) {
+      console.log("[=>] Channel not yet initialized. Try again.");
+      return;
+    }
+
+    const queue = "inventory_queue";
+    this.channel.sendToQueue(queue, Buffer.from(JSON.stringify(message)), {
+      persistent: true,
+    });
+
+    console.log("[=>] Sent %s to queue", message);
+  }
+
+  addRegularMessage(message) {
+    if (!this.channel) {
+      console.log("[=>] Channel not yet initialized. Try again.");
+      return;
+    }
+
+    const queue = "order_queue";
+    this.channel.sendToQueue(queue, Buffer.from(JSON.stringify(message)), {
       persistent: true,
     });
 

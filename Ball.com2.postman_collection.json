@@ -1,36 +1,28 @@
 {
 	"info": {
-		"_postman_id": "23e08a20-fbc6-4f64-b2ec-800cc386e091",
+		"_postman_id": "0cb65d37-ee05-44f2-9220-356127c2e2a3",
 		"name": "Ball.com2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "36368669"
+		"_exporter_id": "15130380"
 	},
 	"item": [
 		{
 			"name": "Order-Service",
 			"item": [
 				{
-					"name": "Order",
+					"name": "new order",
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ProductIDs\" : [\"1\",\"2\"]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:8080/orders",
+							"raw": "http://localhost:3000/api/orders",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
+								"api",
 								"orders"
 							]
 						}
@@ -38,42 +30,34 @@
 					"response": []
 				},
 				{
-					"name": "Order",
+					"name": "Fake order",
 					"request": {
-						"method": "PUT",
+						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ProductIDs\" : [\"1\",\"2\"]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:8080/orders/1",
+							"raw": "http://localhost:3000/api/orders/fake",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
+								"api",
 								"orders",
-								"1"
+								"fake"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Order",
+					"name": "delete order",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ProductIDs\" : [\"1\",\"2\"]\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -81,34 +65,36 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/orders/1",
+							"raw": "http://localhost:3000/api/orders/a1e9f725-1c68-4ede-ac66-d98343d018e1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
+								"api",
 								"orders",
-								"1"
+								"a1e9f725-1c68-4ede-ac66-d98343d018e1"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Order",
+					"name": "All orders",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/order",
+							"raw": "http://localhost:3000/api/orders",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "3000",
 							"path": [
-								"order"
+								"api",
+								"orders"
 							]
 						}
 					},
@@ -141,7 +127,7 @@
 			"name": "Inventory service",
 			"item": [
 				{
-					"name": "Products",
+					"name": "Get all products",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -182,13 +168,13 @@
 					"response": []
 				},
 				{
-					"name": "Product",
+					"name": "Create product",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Computer\",\r\n    \"description\": \"Goede game computer\",\r\n    \"price\": 1999,\r\n    \"stock\": 6\r\n}",
+							"raw": "{\r\n    \"name\": \"Bigger LG television\",\r\n    \"description\": \"Bigger 60 inch television\",\r\n    \"price\": 780,\r\n    \"stock\": 10\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -211,10 +197,19 @@
 					"response": []
 				},
 				{
-					"name": "Product",
+					"name": "Update product",
 					"request": {
-						"method": "DELETE",
+						"method": "PUT",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test Updated\",\r\n    \"description\": \"Test description\",\r\n    \"price\": 100,\r\n    \"stock\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://localhost:9090/api/products/1",
 							"protocol": "http",
@@ -232,19 +227,10 @@
 					"response": []
 				},
 				{
-					"name": "Product",
+					"name": "Delete product",
 					"request": {
-						"method": "PUT",
+						"method": "DELETE",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Computer\",\r\n    \"description\": \"Goede game computer\",\r\n    \"price\": 1999,\r\n    \"stock\": 3\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://localhost:9090/api/products/1",
 							"protocol": "http",
@@ -267,32 +253,326 @@
 			"name": "customer-data-service",
 			"item": [
 				{
-					"name": "Customers",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://127.0.0.1:5000/customer",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "5000",
-							"path": [
-								"customer"
-							]
+					"name": "Customer",
+					"item": [
+						{
+							"name": "Register Customer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CompanyName\" : \"Ahold\",\r\n    \"FirstName\": \"John\",\r\n    \"LastName\": \"Doe\",\r\n    \"Address\": \"123 Main St, New York\",\r\n    \"Email\": \"john.doe@example.com\",\r\n    \"hash\": \"mypassword\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5002/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5002",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login Customer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"david@hotmail.com\",\r\n    \"password\": \"String@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Customers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/customer/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"customer",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Customer by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/5000/customers/bd0b0400-93be-4d02-8122-162a6568da2f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"5000",
+										"customers",
+										"bd0b0400-93be-4d02-8122-162a6568da2f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove Customer",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/api/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"customers"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Shopping Cart",
+					"item": [
+						{
+							"name": "Add Product to Shopping Cart",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/shopping-cart",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"shopping-cart"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Prodcuts from Shopping Cart",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/shopping-cart",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"shopping-cart"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove Product from Shopping Cart",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productId\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/shopping-cart/remove",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"shopping-cart",
+										"remove"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Empty Shopping Cart",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/shopping-cart/empty",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"shopping-cart",
+										"empty"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
 				}
 			]
 		},
 		{
-			"name": "account-service",
+			"name": "Inventory service",
 			"item": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }

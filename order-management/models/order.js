@@ -11,13 +11,13 @@ const pool = mysql.createPool({
   queueLimit: 0,
 });
 
-// Configure the MySQL database connection
+
 const sequelize = new Sequelize(
-  process.env.MYSQL_DATABASE, // database name
-  process.env.MYSQL_USER, // username
-  process.env.MYSQL_PASSWORD, // password
+  process.env.MYSQL_DATABASE, 
+  process.env.MYSQL_USER, 
+  process.env.MYSQL_PASSWORD, 
   {
-    host: "mysql-read", // MySQL container hostname (if running on the same machine as this app, or the IP address of the machine running the MySQL container, if running on separate machines)
+    host: "mysql-read",
     dialect: "mysql",
     logging: false,
   }
@@ -61,13 +61,13 @@ sequelize
   .sync({ force: false })
   .then(() => {
     console.log("Order table created successfully!");
-    // print all tables in the database
+    
     sequelize
       .query("SHOW TABLES")
       .then((result) => {
         console.log(result[0]);
       })
-      // also add Order table to the write database
+      
       .then(() => {
         pool.query(
           "CREATE TABLE IF NOT EXISTS Orders (id INT NOT NULL AUTO_INCREMENT, orderId VARCHAR(255) NOT NULL, customerId VARCHAR(255) NOT NULL, orderDate VARCHAR(255) NOT NULL, products JSON NOT NULL, totalPrice FLOAT NOT NULL, PRIMARY KEY (id))"
@@ -77,5 +77,28 @@ sequelize
   .catch((err) => {
     console.log(err);
   });
+
+//use the read database to find all orders
+Order.findAll = () => {
+  return new Promise((resolve, reject) => {
+    pool.query("SELECT * FROM Orders;", (error, results) => {
+      if (error) {
+        reject(error);
+      }
+      resolve(results);
+    });
+  });
+}
+
+Order.findOne = (orderId) => {
+  return new Promise((resolve, reject) => {
+    pool.query(`SELECT * FROM Orders WHERE orderId = '${orderId}';`, (error, results) => {
+      if (error) {
+        reject(error);
+      }
+      resolve(results);
+    });
+  });
+};
 
 module.exports = Order;

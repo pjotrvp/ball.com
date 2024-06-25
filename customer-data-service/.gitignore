@@ -1,8 +1,0 @@
-# Visual Studio files
-.vs/
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-*.vsp
-*.vsidx

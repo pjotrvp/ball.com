@@ -66,7 +66,7 @@ class RabbitMQConsumer {
   }
 
   startConsuming(channel) {
-    const queue = "order_queue";
+    const queue = "db_order_queue";
 
     channel.consume(
       queue,
@@ -115,7 +115,7 @@ class RabbitMQConsumer {
           return;
         }
 
-        const queue = "order_queue";
+        const queue = "db_order_queue";
 
         channel.assertQueue(queue, {
           durable: true,
