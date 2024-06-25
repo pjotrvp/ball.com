@@ -262,7 +262,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"CompanyName\" : \"Ahold\",\r\n    \"FirstName\": \"John\",\r\n    \"LastName\": \"Doe\",\r\n    \"Address\": \"123 Main St, New York\",\r\n    \"Email\": \"john.doe@example.com\",\r\n    \"hash\": \"mypassword\"\r\n}",
+									"raw": "{\r\n  \"companyName\": \"Ahold\",\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"phoneNumber\": \"+324848584\",\r\n  \"address\": \"123 Main St, New York\",\r\n  \"email\": \"john.doe1@example.com\",\r\n  \"password\": \"String@123\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -270,12 +270,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:5002/api/auth/register",
+									"raw": "http://localhost:8080/api/auth/register",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "5002",
+									"port": "8080",
 									"path": [
 										"api",
 										"auth",
@@ -342,16 +342,16 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:3001/5000/customers/bd0b0400-93be-4d02-8122-162a6568da2f",
+									"raw": "http://localhost:8080/api/customer/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "3001",
+									"port": "8080",
 									"path": [
-										"5000",
-										"customers",
-										"bd0b0400-93be-4d02-8122-162a6568da2f"
+										"api",
+										"customer",
+										"1"
 									]
 								}
 							},
