@@ -43,10 +43,6 @@ const Order = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    products: {
-      type: DataTypes.JSON,
-      defaultValue: [],
-    },
     totalPrice: {
       type: DataTypes.FLOAT,
       defaultValue: 0,
@@ -70,12 +66,35 @@ sequelize
       
       .then(() => {
         pool.query(
-          "CREATE TABLE IF NOT EXISTS Orders (id INT NOT NULL AUTO_INCREMENT, orderId VARCHAR(255) NOT NULL, customerId VARCHAR(255) NOT NULL, orderDate VARCHAR(255) NOT NULL, products JSON NOT NULL, totalPrice FLOAT NOT NULL, PRIMARY KEY (id))"
+          "CREATE TABLE IF NOT EXISTS Orders (id INT NOT NULL AUTO_INCREMENT, orderId VARCHAR(255) NOT NULL, customerId VARCHAR(255) NOT NULL, orderDate VARCHAR(255) NOT NULL, totalPrice FLOAT NOT NULL, PRIMARY KEY (id))"
         );
       });
   })
   .catch((err) => {
     console.log(err);
   });
+
+//use the read database to find all orders
+Order.findAll = () => {
+  return new Promise((resolve, reject) => {
+    pool.query("SELECT * FROM Orders;", (error, results) => {
+      if (error) {
+        reject(error);
+      }
+      resolve(results);
+    });
+  });
+}
+
+Order.findOne = (orderId) => {
+  return new Promise((resolve, reject) => {
+    pool.query(`SELECT * FROM Orders WHERE orderId = '${orderId}';`, (error, results) => {
+      if (error) {
+        reject(error);
+      }
+      resolve(results);
+    });
+  });
+};
 
 module.exports = Order;

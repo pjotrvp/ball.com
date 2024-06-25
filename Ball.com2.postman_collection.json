@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "0955bcdb-3046-4d07-ad18-ee7fb079b787",
+		"_postman_id": "0cb65d37-ee05-44f2-9220-356127c2e2a3",
 		"name": "Ball.com2",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15130380"
 	},
 	"item": [
 		{
@@ -13,15 +14,6 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"orderItems\" : [\r\n        {\r\n            \"productID\" : 1,\r\n            \"quantity\" : 1\r\n        },\r\n        {\r\n            \"productID\" : 2,\r\n            \"quantity\" : 1\r\n        }],\r\n    \"customerID\" : 1\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://localhost:3000/api/orders",
 							"protocol": "http",
@@ -32,6 +24,27 @@
 							"path": [
 								"api",
 								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fake order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/orders/fake",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"orders",
+								"fake"
 							]
 						}
 					},
@@ -161,7 +174,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Test\",\r\n    \"description\": \"Test description\",\r\n    \"price\": 100,\r\n    \"stock\": 10\r\n}",
+							"raw": "{\r\n    \"name\": \"Bigger LG television\",\r\n    \"description\": \"Bigger 60 inch television\",\r\n    \"price\": 780,\r\n    \"stock\": 10\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -249,7 +262,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"address\": \"123 Main St\",\r\n    \"city\": \"New York\",\r\n    \"zip\": \"10001\",\r\n    \"email\": \"john.doe@example.com\",\r\n    \"hash\": \"mypassword\"\r\n}",
+									"raw": "{\r\n    \"CompanyName\" : \"Ahold\",\r\n    \"FirstName\": \"John\",\r\n    \"LastName\": \"Doe\",\r\n    \"Address\": \"123 Main St, New York\",\r\n    \"Email\": \"john.doe@example.com\",\r\n    \"hash\": \"mypassword\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -257,12 +270,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:5000/api/auth/register",
+									"raw": "http://localhost:5002/api/auth/register",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "5000",
+									"port": "5002",
 									"path": [
 										"api",
 										"auth",
@@ -530,7 +543,14 @@
 		}
 	],
 	"auth": {
-		"type": "bearer"
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+				"type": "string"
+			}
+		]
 	},
 	"event": [
 		{

@@ -4,11 +4,17 @@ module.exports = (app) => {
   app.get("/api", OrderController.greeting);
 
   // Order routes
-  app.get("/api/orders", OrderController.validateToken, OrderController.index);
+  app.get("/api/orders", 
+  //OrderController.validateToken, 
+  OrderController.getAllOrders);
   app.get(
     "/api/orders/:id",
     OrderController.validateToken,
     OrderController.indexOne
+  );
+  app.post(
+    "/api/orders/fake",
+    OrderController.createMockOrderForTest
   );
   app.post(
     "/api/orders",

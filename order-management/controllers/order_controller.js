@@ -1,4 +1,4 @@
-const Order = require("../models/order").default;
+const Order = require("../models/order");
 const orderService = require("../services/order_service");
 const uuid = require("uuid");
 const rabbitMQManager = require("../rabbitmq/rabbitMQ_publisher");
@@ -22,7 +22,25 @@ module.exports = {
 
   index(req, res, next) {
     const customerId = req.customerId;
-    Order.findAll({ where: { customerId: customerId } })
+    Order
+      .findAll
+      // { where: { customerId: customerId } }
+      ()
+      .then((orders) => {
+        // if no orders found, return message
+        if (orders.length == 0)
+          return res.status(404).json({ message: "No orders found" });
+        return res.send(orders);
+      })
+      .catch((err) => {
+        console.error(err);
+        next(err);
+      });
+  },
+
+  getAllOrders(req, res, next) {
+    //get all orders from the read database
+    Order.findAll()
       .then((orders) => {
         // if no orders found, return message
         if (orders.length == 0)
@@ -61,11 +79,77 @@ module.exports = {
     }
   },
 
+  async createMockOrderForTest(req, res, next) {
+    const customerId = 1;
+    let orderId = uuid.v4();
+    let totalPrice = 0;
+    let products = [
+      {
+        productId: 1,
+        productName: "Test Product",
+        productPrice: 10.0,
+        quantity: 1,
+      },
+      {
+        productId: 2,
+        productName: "Test Product 2",
+        productPrice: 20.0,
+        quantity: 2,
+      },
+      {
+        productId: 3,
+        productName: "Test Product 3",
+        productPrice: 30.0,
+        quantity: 1,
+      },
+    ];
+
+    products.forEach((product) => {
+      totalPrice += product.productPrice * product.quantity;
+    });
+
+    let dateAndTimeISO = new Date().toISOString();
+
+    eventStoreManager.appendToStream(`Order-${orderId}`, "OrderCreated", {
+      orderId,
+      customerId,
+      orderDate: dateAndTimeISO,
+      products,
+      totalPrice,
+    });
+
+    const query = `INSERT INTO Orders (orderId, customerId, orderDate, products, totalPrice) VALUES ('${orderId}', '${customerId}', '${dateAndTimeISO}','${JSON.stringify(
+      products
+    )}', ${totalPrice});`;
+
+    console.log(query);
+
+    rabbitMQManager.addMessage(query);
+    const command = {
+      type: "OrderCreated",
+      payload: {
+        orderId,
+        customerId,
+        orderDate: dateAndTimeISO,
+        products,
+        totalPrice,
+      },
+    };
+    rabbitMQManager.addRegularMessage(command);
+    rabbitMQManager.addInventoryMessage(command);
+    return res.status(201).json({
+      message: "Successfully created order",
+      products: products,
+      orderId: orderId,
+      totalPrice: totalPrice,
+    });
+  },
+
   async createOrder(req, res, next) {
     const customerId = req.customerId;
     let orderId = uuid.v4();
     let totalPrice = 0;
-    
+
     await axios
       .get("http://customer-management:5002/api/shopping-cart", {
         headers: {
@@ -90,14 +174,27 @@ module.exports = {
           orderId,
           customerId,
           orderDate: dateAndTimeISO,
-          products,
           totalPrice,
         });
-        rabbitMQManager.addMessage(
-          `INSERT INTO Orders (orderId, customerId, orderDate, products, totalPrice) VALUES ('${orderId}', '${customerId}', '${dateAndTimeISO}', '${JSON.stringify(
-            products
-          )}', ${totalPrice})`
-        );
+
+        const query = `INSERT INTO Orders (orderId, customerId, orderDate, products, totalPrice) VALUES ('${orderId}', '${customerId}', '${dateAndTimeISO}', '${JSON.stringify(
+          products
+        )}', ${totalPrice});`;
+
+        rabbitMQManager.addMessage(query);
+
+        const command = {
+          type: "OrderCreated",
+          payload: {
+            orderId,
+            customerId,
+            orderDate: dateAndTimeISO,
+            products,
+            totalPrice,
+          },
+        };
+        rabbitMQManager.addRegularMessage(command);
+        rabbitMQManager.addInventoryMessage(command);
         return res.status(201).json({
           message: "Successfully created order",
           products: products,
@@ -129,10 +226,16 @@ module.exports = {
             products: orderProps.products,
             time: new Date.now(),
           });
-          // update the order
-          rabbitMQManager.addMessage(
-            `UPDATE Orders SET products = '${orderProps.products}' WHERE orderId = '${orderId}'`
-          );
+
+          const query = `UPDATE Orders SET products = '${JSON.stringify(
+            orderProps.products
+          )}' WHERE orderId = '${orderId}';`;
+          rabbitMQManager.addMessage(query);
+          const command = {
+            type: "UpdateOrder",
+            payload: { orderId, products: orderProps.products },
+          };
+          rabbitMQManager.addRegularMessage(command);
         }
       })
       .catch((err) => {
@@ -156,9 +259,11 @@ module.exports = {
           eventStoreManager.appendToStream(`Order-${orderId}`, "OrderDeleted", {
             orderId,
           });
-          rabbitMQManager.addMessage(
-            `DELETE FROM Orders WHERE orderId = '${orderId}'`
-          );
+          const query = `DELETE FROM Orders WHERE orderId = '${orderId}'`;
+          rabbitMQManager.addMessage(query);
+          const command = { type: "DeleteOrder", payload: { orderId } };
+
+          rabbitMQManager.addMessage(command);
           return res
             .status(200)
             .json({ message: "Successfully deleted order", order: order });
@@ -169,9 +274,10 @@ module.exports = {
         eventStoreManager.appendToStream(`Order-${orderId}`, "OrderDeleted", {
           orderId,
         });
-        rabbitMQManager.addMessage(
-          `DELETE FROM Orders WHERE orderId = '${orderId}'`
-        );
+        const query = `DELETE FROM Orders WHERE orderId = '${orderId}';`;
+        rabbitMQManager.addMessage(query);
+        const command = { type: "DeleteOrder", payload: { orderId } };
+        rabbitMQManager.addMessage(command);
         return res.status(200).json({ message: "Successfully deleted order" });
       });
   },
