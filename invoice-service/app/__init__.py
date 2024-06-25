@@ -21,10 +21,13 @@ def create_app():
     with app.app_context():
         from app.model.invoice import Invoice
 
+    from app.controller.event_controller import event_blueprint
     from app.controller.invoice_controller import invoice_blueprint
     from app.controller.message_controller import message_blueprint
 
     logger.debug("Registering blueprints...")
+
+    app.register_blueprint(event_blueprint, url_prefix='/event')
     app.register_blueprint(invoice_blueprint, url_prefix='/invoice')
     app.register_blueprint(message_blueprint, url_prefix='/message')
 
