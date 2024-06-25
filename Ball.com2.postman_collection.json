@@ -292,7 +292,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"john.doe@example.com\",\r\n    \"password\": \"mypassword\"\r\n}",
+									"raw": "{\r\n    \"email\": \"david@hotmail.com\",\r\n    \"password\": \"String@123\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -300,12 +300,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:5000/api/auth/login",
+									"raw": "http://localhost:8080/api/auth/login",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "5000",
+									"port": "8080",
 									"path": [
 										"api",
 										"auth",
@@ -321,15 +321,16 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:5000/api/customers",
+									"raw": "http://localhost:8080/api/customer/all",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "5000",
+									"port": "8080",
 									"path": [
 										"api",
-										"customers"
+										"customer",
+										"all"
 									]
 								}
 							},
