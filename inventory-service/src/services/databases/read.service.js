@@ -113,7 +113,7 @@ async function lowerStockOfProduct(id, quantity) {
                 if (error) return reject(error);
                 if (results.affectedRows < 1) return reject(new Error('Product not found'));
 
-                console.log("[W | <=] Stock lowered in read database: ", id, quantity);
+                console.log(`[W | <=] Stock lowered in read database for product: ${id} by ${quantity}`);
                 resolve(results);
             });
         });
