@@ -1,4 +1,5 @@
 const { writePool } = require('../../../pool');
+const eventStore = require("../../stores/events.store");
 const RabbitMQPublisher = require('../rabbitmq/publisher.service')
 const publisher = new RabbitMQPublisher()
 
@@ -21,7 +22,11 @@ async function createProduct(body) {
             });
         });
 
-        const command = { type: 'ProductCreated', payload: { id: results.insertId, name, description, price, stock } };
+        const payload = { id: results.insertId, name, description, price, stock };
+
+        eventStore.appendToStream(`inventory-stream`, "ProductCreated", payload);
+
+        const command = { type: 'ProductCreated', payload };
         publisher.publish(command);
 
         return results.insertId;
@@ -78,13 +83,13 @@ async function lowerStockOfProductsInOrder(order) {
     try {
         for (const product of products) {
             await new Promise((resolve, reject) => {
-                writePool.query(query, [product.quantity, product.id], (error, results) => {
+                writePool.query(query, [product.quantity, product.productId], (error, results) => {
                     if (error) return reject(error);
-                    if (results.affectedRows < 1) return reject(new Error(`Product not found: ${product.id}`));
+                    if (results.affectedRows < 1) return reject(new Error(`Product not found: ${product.productId}`));
 
                     resolve(results);
 
-                    const command = { type: 'ProductStockLowered', payload: { id: product.id, quantity: product.quantity } };
+                    const command = { type: 'ProductStockLowered', payload: { id: product.productId, quantity: product.quantity } };
                     publisher.publish(command);
                 });
             });

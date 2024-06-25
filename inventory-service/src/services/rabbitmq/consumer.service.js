@@ -51,6 +51,7 @@ class RabbitMQConsumer {
         const command = JSON.parse(message.content.toString());
 
         try {
+          console.log("[W | <=] Received command: ", command.type);
           await eventHandler.handleEvent(command);
           channel.ack(message);
         } catch (error) {
