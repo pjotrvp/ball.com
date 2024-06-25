@@ -43,6 +43,10 @@ const Order = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    products: {
+      type: DataTypes.JSON,
+      defaultValue: [],
+    },
     totalPrice: {
       type: DataTypes.FLOAT,
       defaultValue: 0,
@@ -66,7 +70,7 @@ sequelize
       
       .then(() => {
         pool.query(
-          "CREATE TABLE IF NOT EXISTS Orders (id INT NOT NULL AUTO_INCREMENT, orderId VARCHAR(255) NOT NULL, customerId VARCHAR(255) NOT NULL, orderDate VARCHAR(255) NOT NULL, totalPrice FLOAT NOT NULL, PRIMARY KEY (id))"
+          "CREATE TABLE IF NOT EXISTS Orders (id INT NOT NULL AUTO_INCREMENT, orderId VARCHAR(255) NOT NULL, customerId VARCHAR(255) NOT NULL, orderDate VARCHAR(255) NOT NULL, products JSON NOT NULL, totalPrice FLOAT NOT NULL, PRIMARY KEY (id))"
         );
       });
   })
