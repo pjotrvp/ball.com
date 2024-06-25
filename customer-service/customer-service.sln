@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "customer-service", "customer-service\customer-service.csproj", "{A2A61C93-DAD0-49C3-971E-E2569728453C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "customer-service", "customer-service\customer-service.csproj", "{A2A61C93-DAD0-49C3-971E-E2569728453C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subscriber", "Subscriber\Subscriber.csproj", "{4FE43EA2-06FD-44D0-B67C-A6F9BEF816D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A2A61C93-DAD0-49C3-971E-E2569728453C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2A61C93-DAD0-49C3-971E-E2569728453C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2A61C93-DAD0-49C3-971E-E2569728453C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FE43EA2-06FD-44D0-B67C-A6F9BEF816D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FE43EA2-06FD-44D0-B67C-A6F9BEF816D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FE43EA2-06FD-44D0-B67C-A6F9BEF816D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FE43EA2-06FD-44D0-B67C-A6F9BEF816D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

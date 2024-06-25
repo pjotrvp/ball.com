@@ -1,6 +1,7 @@
 ﻿using customer_service.Context;
 using customer_service.Interface;
 using customer_service.Models;
+using customer_service.RabbitMQ;
 
 namespace customer_service.Services
 {
@@ -8,16 +9,23 @@ namespace customer_service.Services
     {
 
         private readonly AuthDbContext _context;
-
-        public CustomerService(AuthDbContext context)
+        private readonly IMessageProducer _messageProducer;
+        public CustomerService(AuthDbContext context, IMessageProducer messageProducer)
         {
             _context = context;
+            _messageProducer = messageProducer;
         }
 
+      
         public void AddCustomer(Customer customer)
         {
-            _context.Customers.Add(customer);
-            _context.SaveChanges();
+            if (customer is not null)
+            {
+                _context.Customers.Add(customer);
+                _context.SaveChanges();
+                _messageProducer.SendMessage(customer);
+
+            }
         }
 
         public Customer GetCustomer(int id)

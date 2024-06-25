@@ -1,6 +1,8 @@
 using customer_service.Context;
 using customer_service.Interface;
 using customer_service.Models;
+using customer_service.RabbitMQ;
+using customer_service.RabbitMQ.Connection;
 using customer_service.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -33,6 +35,9 @@ else
 
 builder.Services.AddControllers();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
+builder.Services.AddSingleton<IRabbitMqConnection>(new RabbitMqConnection());
+builder.Services.AddScoped<IMessageProducer, RabbitMqProducer>();
+
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     options.Password.RequiredLength = 5;
