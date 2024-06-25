@@ -39,7 +39,7 @@ class RabbitMQManager {
     }
 
     const queue = "db_order_queue";
-    this.channel.sendToQueue(queue, Buffer.from(JSON.stringify(message)), {
+    this.channel.sendToQueue(queue, Buffer.from(message), {
       persistent: true,
     });
 

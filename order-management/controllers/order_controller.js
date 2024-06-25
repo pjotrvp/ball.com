@@ -6,6 +6,7 @@ const eventStoreManager = require("../eventstore/eventstore_manager");
 const config = require("../config.json");
 const jwt = require("jsonwebtoken");
 const axios = require("axios");
+const mysql = require("mysql2");
 
 module.exports = {
   indexOne(req, res, next) {
@@ -82,8 +83,8 @@ module.exports = {
   async createMockOrderForTest(req, res, next) {
     const customerId = 1;
     let orderId = uuid.v4();
-    let totalPrice = 0;
-    let products = [
+    let totalPrice = 0.0;
+    const products = [
       {
         productId: 1,
         productName: "Test Product",
@@ -174,6 +175,7 @@ module.exports = {
           orderId,
           customerId,
           orderDate: dateAndTimeISO,
+          products,
           totalPrice,
         });
 
