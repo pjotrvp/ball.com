@@ -5,4 +5,4 @@ class Invoice(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     customer_name = db.Column(db.String(50))
     amount = db.Column(db.Float)
-    status = db.Column(db.String(20))
+    status = db.Column(db.String(30))

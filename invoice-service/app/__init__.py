@@ -3,6 +3,7 @@ import pika # type: ignore
 from flask import Flask # type: ignore
 from flask_sqlalchemy import SQLAlchemy # type: ignore
 from sqlalchemy.exc import OperationalError # type: ignore
+
 import time
 
 db = SQLAlchemy()
@@ -16,6 +17,9 @@ def create_app():
 
     logger.debug("Initializing databases...")
     db.init_app(app)
+
+    with app.app_context():
+        from app.model.invoice import Invoice
 
     from app.controller.invoice_controller import invoice_blueprint
     from app.controller.message_controller import message_blueprint
@@ -31,22 +35,16 @@ def create_app():
 def initialize_database(app):
     logging.basicConfig(level=logging.DEBUG)
     logger = logging.getLogger(__name__)
+
     
     with app.app_context():
         retry_attempts = 5
         for attempt in range(retry_attempts):
             try:
-                # Create tables for read database
-                with db.get_engine(app, bind='read').connect() as conn:
-                    db.Model.metadata.create_all(bind=conn)
-                logger.info("Successfully created all read database tables and connected to the database.")
+                db.create_all()
+                logger.info("Succesfully connected to the databases")
+            
 
-                # Create tables for write database
-                with db.get_engine(app).connect() as conn:
-                    db.Model.metadata.create_all(bind=conn)
-                logger.info("Successfully created all write database tables and connected to the database.")
-                
-                break
             except OperationalError as e:
                 logger.error(f"Failed to connect to the database (attempt {attempt + 1}/{retry_attempts}): {e}")
                 if attempt < retry_attempts - 1:
