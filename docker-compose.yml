@@ -136,21 +136,24 @@ services:
       RABBITMQ_USER: guest
       RABBITMQ_PASSWORD: guest
 
-  customer-data-service:
+  customer-service:
     networks:
      - ballcom
     build:
-     context: ./customer-data-service/customer-data-service
-     dockerfile: Dockerfile
-    container_name: customer-data-service
+     context: .
+     dockerfile: ./customer-service/customer-service/Dockerfile
+    container_name: customer-service
     restart: always
     ports:
      - 8080:8080
+     - 8081:8181
     depends_on:
       - mysql-write
       - mysql-read
       - rabbitmq
     environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: server=mysql-write;port=3306;database=ballcom;user=administrator;password=password420;
       MYSQL_HOST: mysql-write
       MYSQL_PORT: 3306
       MYSQL_USER: administrator
