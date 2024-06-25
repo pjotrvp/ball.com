@@ -83,45 +83,28 @@ module.exports = {
   async createMockOrderForTest(req, res, next) {
     const customerId = 1;
     let orderId = uuid.v4();
-    let totalPrice = 0.0;
+    let dateAndTimeISO = new Date().toISOString();
     const products = [
       {
-        productId: 1,
-        productName: "Test Product",
-        productPrice: 10.0,
-        quantity: 1,
-      },
-      {
-        productId: 2,
-        productName: "Test Product 2",
-        productPrice: 20.0,
+        id: 1,
         quantity: 2,
       },
       {
-        productId: 3,
-        productName: "Test Product 3",
-        productPrice: 30.0,
-        quantity: 1,
+        id: 2,
+        quantity: 3,
       },
     ];
-
-    products.forEach((product) => {
-      totalPrice += product.productPrice * product.quantity;
-    });
-
-    let dateAndTimeISO = new Date().toISOString();
-
+    
     eventStoreManager.appendToStream(`Order-${orderId}`, "OrderCreated", {
       orderId,
       customerId,
       orderDate: dateAndTimeISO,
       products,
-      totalPrice,
     });
 
-    const query = `INSERT INTO Orders (orderId, customerId, orderDate, products, totalPrice) VALUES ('${orderId}', '${customerId}', '${dateAndTimeISO}','${JSON.stringify(
+    const query = `INSERT INTO Orders (orderId, customerId, orderDate, products) VALUES ('${orderId}', '${customerId}', '${dateAndTimeISO}','${JSON.stringify(
       products
-    )}', ${totalPrice});`;
+    )}');`;
 
     console.log(query);
 
@@ -133,7 +116,6 @@ module.exports = {
         customerId,
         orderDate: dateAndTimeISO,
         products,
-        totalPrice,
       },
     };
     rabbitMQManager.addRegularMessage(command);
@@ -142,17 +124,15 @@ module.exports = {
       message: "Successfully created order",
       products: products,
       orderId: orderId,
-      totalPrice: totalPrice,
     });
   },
 
   async createOrder(req, res, next) {
     const customerId = req.customerId;
     let orderId = uuid.v4();
-    let totalPrice = 0;
 
     await axios
-      .get("http://customer-management:5002/api/shopping-cart", {
+      .get("http://customer-management:8080/api/shopping-cart", {
         headers: {
           Authorization: req.headers.authorization,
         },
@@ -176,12 +156,11 @@ module.exports = {
           customerId,
           orderDate: dateAndTimeISO,
           products,
-          totalPrice,
         });
 
-        const query = `INSERT INTO Orders (orderId, customerId, orderDate, products, totalPrice) VALUES ('${orderId}', '${customerId}', '${dateAndTimeISO}', '${JSON.stringify(
+        const query = `INSERT INTO Orders (orderId, customerId, orderDate, products) VALUES ('${orderId}', '${customerId}', '${dateAndTimeISO}', '${JSON.stringify(
           products
-        )}', ${totalPrice});`;
+        )}');`;
 
         rabbitMQManager.addMessage(query);
 
@@ -192,22 +171,31 @@ module.exports = {
             customerId,
             orderDate: dateAndTimeISO,
             products,
-            totalPrice,
           },
         };
         rabbitMQManager.addRegularMessage(command);
         rabbitMQManager.addInventoryMessage(command);
         return res.status(201).json({
-          message: "Successfully created order",
+          message: "Successfully created pending order",
           products: products,
           orderId: orderId,
-          totalPrice: totalPrice,
         });
       })
       .catch((err) => {
         console.error(err);
         return res.status(404).json({ message: "No products found" });
       });
+  },
+
+  setOrderState(id, state) {
+    eventStoreManager.appendToStream(`Order-${id}`, "OrderStateUpdated", {
+      orderId: id,
+      state: state,
+    });
+    const query = `UPDATE Orders SET state = '${state}' WHERE orderId = '${id}';`;
+    rabbitMQManager.addMessage(query);
+    const command = { type: "UpdateOrderState", payload: { id, state } };
+    rabbitMQManager.addRegularMessage(command);
   },
 
   // updateOrder

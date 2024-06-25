@@ -1,5 +1,6 @@
 const amqp = require("amqplib/callback_api");
 const mysql = require("mysql2");
+const eventHandler = require("./event_handler");
 
 class RabbitMQReadConsumer {
   constructor() {
@@ -79,6 +80,31 @@ class RabbitMQReadConsumer {
     );
   }
 
+  startConsumingCommands(channel) {
+    channel.consume(
+      this.queue,
+      async (message) => {
+        if (!message) return;
+        const command = JSON.parse(message.content.toString());
+
+        try {
+          console.log("[W | <=] Received command: ", command.type);
+          await eventHandler.handleEvent(command);
+          channel.ack(message);
+        } catch (error) {
+          console.error("[W | <=] Error processing command: ", error.message);
+          channel.ack(message);
+        }
+      },
+      {
+        noAck: false,
+        consumerTag: "myConsumer",
+      }
+    );
+
+    this.channel = channel;
+  }
+
   listenToReadQueue() {
     amqp.connect("amqp://rabbitmq-queue", (errorConnect, connection) => {
       if (errorConnect) {
@@ -100,15 +126,26 @@ class RabbitMQReadConsumer {
           return;
         }
 
+        const orderQueue = "order_queue";
+        const inventoryQueue = "inventory_queue";
         const readQueue = "order_replication_queue";
 
         channel.assertQueue(readQueue, {
           durable: true,
         });
+        channel.assertQueue(orderQueue, {
+          durable: true,
+        });
+        channel.assertQueue(inventoryQueue, {
+          durable: true,
+        });
 
+        console.log("[R | <=] Waiting for messages in %s", orderQueue);
+        console.log("[R | <=] Waiting for messages in %s", inventoryQueue);
         console.log("[R | <=] Waiting for messages in %s", readQueue);
 
         this.startConsuming(channel);
+        this.startConsumingCommands(channel);
       });
     });
   }
