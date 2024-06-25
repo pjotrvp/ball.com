@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request # type: ignore
 import logging
 import pika # type: ignore
 import json
-from app import connect_to_rabbitmq, create_app, db, initialize_database
+from app import connect_to_rabbitmq, create_app, initialize_database
 from sqlalchemy.exc import OperationalError # type: ignore
 
 

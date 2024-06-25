@@ -14,8 +14,14 @@ class Config:
     MYSQL_PASSWORD_READ = 'password420'
     MYSQL_DATABASE_READ = 'ballcom'
 
-    SQLALCHEMY_BINDS = {'read': f"mysql+pymysql://{MYSQL_USER_READ}:{MYSQL_PASSWORD_READ}@{MYSQL_HOST_READ}/{MYSQL_DATABASE_READ}"}
+    SQLALCHEMY_DATABASE_URI_READ = f"mysql+pymysql://{MYSQL_USER_READ}:{MYSQL_PASSWORD_READ}@{MYSQL_HOST_READ}/{MYSQL_DATABASE_READ}"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+    SQLALCHEMY_BINDS = { 
+        'write' : SQLALCHEMY_DATABASE_URI,
+        'read' : SQLALCHEMY_DATABASE_URI_READ 
+        }
+
 
     RABBITMQ_HOST = 'rabbitmq-queue'
     RABBITMQ_VHOST = '/'
@@ -23,3 +29,6 @@ class Config:
     RABBITMQ_QUEUE = 'Invoice'
     RABBITMQ_USER = 'guest'
     RABBITMQ_PASSWORD = 'guest'
+
+
+    EVENTSTOREDB_CONNECTIONSTRING = 'esdb://eventstoredb?tls=false'
