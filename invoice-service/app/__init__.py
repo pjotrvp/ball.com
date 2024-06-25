@@ -41,7 +41,7 @@ def initialize_database(app):
         retry_attempts = 5
         for attempt in range(retry_attempts):
             try:
-                db.create_all()
+                db.create_all(bind_key=["write", "read"])
                 logger.info("Succesfully connected to the databases")
             
 
