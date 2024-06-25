@@ -55,7 +55,7 @@ class RabbitMQConsumer {
           channel.ack(message);
         } catch (error) {
           console.error("[W | <=] Error processing command: ", error.message);
-          channel.nack(message);
+          channel.ack(message);
         }
       },
       {
