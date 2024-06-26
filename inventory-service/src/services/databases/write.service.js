@@ -83,13 +83,13 @@ async function lowerStockOfProductsInOrder(order) {
     try {
         for (const product of products) {
             await new Promise((resolve, reject) => {
-                writePool.query(query, [product.quantity, product.productId], (error, results) => {
+                writePool.query(query, [product.quantity, product.id], (error, results) => {
                     if (error) return reject(error);
-                    if (results.affectedRows < 1) return reject(new Error(`Product not found: ${product.productId}`));
+                    if (results.affectedRows < 1) return reject(new Error(`Product not found: ${product.id}`));
 
                     resolve(results);
 
-                    const command = { type: 'ProductStockLowered', payload: { id: product.productId, quantity: product.quantity } };
+                    const command = { type: 'ProductStockLowered', payload: { id: product.id, quantity: product.quantity } };
                     publisher.publish(command);
                 });
             });
