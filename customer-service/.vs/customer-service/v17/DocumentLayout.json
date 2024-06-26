@@ -3,12 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\Ball.com2.postman_collection.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dierc\\Downloads\\Ball.com2.postman_collection.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\interface\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\interface\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +51,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\eventstore\\eventstoreconnectionprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\eventstore\\eventstoreconnectionprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\interface\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\interface\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\models\\events\\shoppingcartclearedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -147,9 +153,6 @@
       "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\Ball.com2.postman_collection.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -185,37 +188,119 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ICustomerQueryHandlers.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\Models\\ICustomerQueryHandlers.cs",
-              "RelativeDocumentMoniker": "customer-service\\CQRS\\Models\\ICustomerQueryHandlers.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\Models\\ICustomerQueryHandlers.cs",
-              "RelativeToolTip": "customer-service\\CQRS\\Models\\ICustomerQueryHandlers.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA0AAAA",
+              "DocumentIndex": 9,
+              "Title": "GetCustomerByIdQuery.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\Models\\GetCustomerByIdQuery.cs",
+              "RelativeDocumentMoniker": "customer-service\\CQRS\\Models\\GetCustomerByIdQuery.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\Models\\GetCustomerByIdQuery.cs",
+              "RelativeToolTip": "customer-service\\CQRS\\Models\\GetCustomerByIdQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T14:57:09.034Z",
+              "WhenOpened": "2024-06-26T14:53:48.183Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CustomerQueryHandlers.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\CustomerQueryHandlers.cs",
-              "RelativeDocumentMoniker": "customer-service\\CQRS\\CustomerQueryHandlers.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\CustomerQueryHandlers.cs",
-              "RelativeToolTip": "customer-service\\CQRS\\CustomerQueryHandlers.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAA/AAAA",
+              "DocumentIndex": 10,
+              "Title": "GetAllCustomersQuery.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\Models\\GetAllCustomersQuery.cs",
+              "RelativeDocumentMoniker": "customer-service\\CQRS\\Models\\GetAllCustomersQuery.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\Models\\GetAllCustomersQuery.cs",
+              "RelativeToolTip": "customer-service\\CQRS\\Models\\GetAllCustomersQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T14:54:33.823Z",
+              "WhenOpened": "2024-06-26T14:53:37.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProductAddedToCartEvent.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\Events\\ProductAddedToCartEvent.cs",
+              "RelativeDocumentMoniker": "customer-service\\Models\\Events\\ProductAddedToCartEvent.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\Events\\ProductAddedToCartEvent.cs",
+              "RelativeToolTip": "customer-service\\Models\\Events\\ProductAddedToCartEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T13:00:11.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\CustomerService.cs",
+              "RelativeDocumentMoniker": "customer-service\\Services\\CustomerService.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\CustomerService.cs",
+              "RelativeToolTip": "customer-service\\Services\\CustomerService.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAQwFIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T20:22:17.207Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Program.cs",
+              "RelativeDocumentMoniker": "customer-service\\Program.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Program.cs",
+              "RelativeToolTip": "customer-service\\Program.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAYwDYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T20:26:18.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "customer-service\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "customer-service\\Controllers\\CustomerController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAiwCoAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T20:22:45.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ICustomerService.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Interface\\ICustomerService.cs",
+              "RelativeDocumentMoniker": "customer-service\\Interface\\ICustomerService.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Interface\\ICustomerService.cs",
+              "RelativeToolTip": "customer-service\\Interface\\ICustomerService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T20:23:07.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Ball.com2.postman_collection.json",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\Ball.com2.postman_collection.json",
+              "RelativeDocumentMoniker": "..\\Ball.com2.postman_collection.json",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\Ball.com2.postman_collection.json",
+              "RelativeToolTip": "..\\Ball.com2.postman_collection.json",
+              "ViewState": "AQIAAPcAAAAAAAAAAAAAACYBAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-25T13:07:29.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "GetShoppingCartQuery.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\Models\\GetShoppingCartQuery.cs",
               "RelativeDocumentMoniker": "customer-service\\CQRS\\Models\\GetShoppingCartQuery.cs",
@@ -229,84 +314,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "GetCustomerByIdQuery.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\Models\\GetCustomerByIdQuery.cs",
-              "RelativeDocumentMoniker": "customer-service\\CQRS\\Models\\GetCustomerByIdQuery.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\Models\\GetCustomerByIdQuery.cs*",
-              "RelativeToolTip": "customer-service\\CQRS\\Models\\GetCustomerByIdQuery.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Title": "CustomerQueryHandlers.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\CustomerQueryHandlers.cs",
+              "RelativeDocumentMoniker": "customer-service\\CQRS\\CustomerQueryHandlers.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\CustomerQueryHandlers.cs",
+              "RelativeToolTip": "customer-service\\CQRS\\CustomerQueryHandlers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T14:53:48.183Z",
+              "WhenOpened": "2024-06-26T14:54:33.823Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "GetAllCustomersQuery.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\Models\\GetAllCustomersQuery.cs",
-              "RelativeDocumentMoniker": "customer-service\\CQRS\\Models\\GetAllCustomersQuery.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\Models\\GetAllCustomersQuery.cs",
-              "RelativeToolTip": "customer-service\\CQRS\\Models\\GetAllCustomersQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "ICustomerQueryHandlers.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\Models\\ICustomerQueryHandlers.cs",
+              "RelativeDocumentMoniker": "customer-service\\CQRS\\Models\\ICustomerQueryHandlers.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\CQRS\\Models\\ICustomerQueryHandlers.cs",
+              "RelativeToolTip": "customer-service\\CQRS\\Models\\ICustomerQueryHandlers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T14:53:37.868Z",
+              "WhenOpened": "2024-06-26T14:57:09.034Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ProductAddedToCartEvent.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\Events\\ProductAddedToCartEvent.cs",
-              "RelativeDocumentMoniker": "customer-service\\Models\\Events\\ProductAddedToCartEvent.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\Events\\ProductAddedToCartEvent.cs",
-              "RelativeToolTip": "customer-service\\Models\\Events\\ProductAddedToCartEvent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T13:00:11.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CustomerService.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\CustomerService.cs",
-              "RelativeDocumentMoniker": "customer-service\\Services\\CustomerService.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\CustomerService.cs",
-              "RelativeToolTip": "customer-service\\Services\\CustomerService.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAQwFIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T20:22:17.207Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Program.cs",
-              "RelativeDocumentMoniker": "customer-service\\Program.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Program.cs",
-              "RelativeToolTip": "customer-service\\Program.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAYwDYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T20:26:18.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\CustomerController.cs",
-              "RelativeDocumentMoniker": "customer-service\\Controllers\\CustomerController.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\CustomerController.cs",
-              "RelativeToolTip": "customer-service\\Controllers\\CustomerController.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAAAGUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T20:22:45.52Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "ProductRemovedFromCartEvent.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\Events\\ProductRemovedFromCartEvent.cs",
               "RelativeDocumentMoniker": "customer-service\\Models\\Events\\ProductRemovedFromCartEvent.cs",
@@ -318,25 +351,8 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ICustomerService.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Interface\\ICustomerService.cs",
-              "RelativeDocumentMoniker": "customer-service\\Interface\\ICustomerService.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Interface\\ICustomerService.cs",
-              "RelativeToolTip": "customer-service\\Interface\\ICustomerService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T20:23:07.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "IEventStoreConnectionProvider.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Interface\\IEventStoreConnectionProvider.cs",
               "RelativeDocumentMoniker": "customer-service\\Interface\\IEventStoreConnectionProvider.cs",
@@ -349,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "EventStoreConnectionProvider.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\EventStore\\EventStoreConnectionProvider.cs",
               "RelativeDocumentMoniker": "customer-service\\EventStore\\EventStoreConnectionProvider.cs",
@@ -362,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ShoppingCartClearedEvent.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\Events\\ShoppingCartClearedEvent.cs",
               "RelativeDocumentMoniker": "customer-service\\Models\\Events\\ShoppingCartClearedEvent.cs",
@@ -375,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "EventStoreEventData.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\EventStore\\EventStoreEventData.cs",
               "RelativeDocumentMoniker": "customer-service\\EventStore\\EventStoreEventData.cs",
@@ -388,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "RabbitMqConnection.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\Connection\\RabbitMqConnection.cs",
               "RelativeDocumentMoniker": "customer-service\\RabbitMQ\\Connection\\RabbitMqConnection.cs",
@@ -401,7 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "ShoppingCartController .cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\ShoppingCartController .cs",
               "RelativeDocumentMoniker": "customer-service\\Controllers\\ShoppingCartController .cs",
@@ -414,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "ShoppingCart.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\ShoppingCart.cs",
               "RelativeDocumentMoniker": "customer-service\\Models\\ShoppingCart.cs",
@@ -427,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\appsettings.json",
               "RelativeDocumentMoniker": "customer-service\\appsettings.json",
@@ -440,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\Subscriber\\Program.cs",
               "RelativeDocumentMoniker": "Subscriber\\Program.cs",
@@ -453,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "IRabbitMqConnection.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\Connection\\IRabbitMqConnection.cs",
               "RelativeDocumentMoniker": "customer-service\\RabbitMQ\\Connection\\IRabbitMqConnection.cs",
@@ -466,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "RabbitMqProducer.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\RabbitMqProducer.cs",
               "RelativeDocumentMoniker": "customer-service\\RabbitMQ\\RabbitMqProducer.cs",
@@ -479,7 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\LoginModel.cs",
               "RelativeDocumentMoniker": "customer-service\\Models\\LoginModel.cs",
@@ -492,7 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "customer-service\\Services\\AuthService.cs",
@@ -505,7 +521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "customer-service\\Controllers\\AuthController.cs",
@@ -518,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "ShoppingCartService.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\ShoppingCartService.cs",
               "RelativeDocumentMoniker": "customer-service\\Services\\ShoppingCartService.cs",
@@ -531,7 +547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "IMessageProducer.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\IMessageProducer.cs",
               "RelativeDocumentMoniker": "customer-service\\RabbitMQ\\IMessageProducer.cs",
@@ -544,7 +560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "AuthDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Migrations\\AuthDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "customer-service\\Migrations\\AuthDbContextModelSnapshot.cs",
@@ -557,7 +573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "AddProductRequest.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\AddProductRequest.cs",
               "RelativeDocumentMoniker": "customer-service\\Models\\AddProductRequest.cs",
@@ -570,7 +586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "IShoppingCartService.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Interface\\IShoppingCartService.cs",
               "RelativeDocumentMoniker": "customer-service\\Interface\\IShoppingCartService.cs",
@@ -583,7 +599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "RegisterModel.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\RegisterModel.cs",
               "RelativeDocumentMoniker": "customer-service\\Models\\RegisterModel.cs",
@@ -596,7 +612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\Customer.cs",
               "RelativeDocumentMoniker": "customer-service\\Models\\Customer.cs",
@@ -609,7 +625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "20240620163811_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Migrations\\20240620163811_InitialCreate.cs",
               "RelativeDocumentMoniker": "customer-service\\Migrations\\20240620163811_InitialCreate.cs",
@@ -622,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "AuthDbContext.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Context\\AuthDbContext.cs",
               "RelativeDocumentMoniker": "customer-service\\Context\\AuthDbContext.cs",
@@ -635,7 +651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "products.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\products.cs",
               "RelativeDocumentMoniker": "customer-service\\Models\\products.cs",
@@ -648,7 +664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "customer-service\\Models\\ApplicationUser.cs",
@@ -661,20 +677,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Ball.com2.postman_collection.json",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\Ball.com2.postman_collection.json",
-              "RelativeDocumentMoniker": "..\\Ball.com2.postman_collection.json",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\Ball.com2.postman_collection.json",
-              "RelativeToolTip": "..\\Ball.com2.postman_collection.json",
-              "ViewState": "AQIAAP8AAAAAAAAAAABRwBUBAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-25T13:07:29.263Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\IAuthService.cs",
               "RelativeDocumentMoniker": "customer-service\\Services\\IAuthService.cs",
@@ -687,7 +690,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "customer-service\\Properties\\launchSettings.json",
@@ -700,7 +703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\appsettings.Development.json",
               "RelativeDocumentMoniker": "customer-service\\appsettings.Development.json",
@@ -713,7 +716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Dockerfile",
               "RelativeDocumentMoniker": "customer-service\\Dockerfile",
@@ -726,7 +729,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "customer-service\\Controllers\\WeatherForecastController.cs",
@@ -739,7 +742,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "TestController.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\TestController.cs",
               "RelativeDocumentMoniker": "customer-service\\Controllers\\TestController.cs",
@@ -752,7 +755,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "20240620163811_InitialCreate.Designer.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Migrations\\20240620163811_InitialCreate.Designer.cs",
               "RelativeDocumentMoniker": "customer-service\\Migrations\\20240620163811_InitialCreate.Designer.cs",
@@ -761,6 +764,40 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-24T20:21:12.978Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "65e09388-cd22-4605-936c-780b811dfff0",
+        "Display": 0,
+        "X": 274,
+        "Y": 126,
+        "Width": 1554,
+        "Height": 729,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ball.com2.postman_collection.json",
+              "DocumentMoniker": "C:\\Users\\dierc\\Downloads\\Ball.com2.postman_collection.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\Ball.com2.postman_collection.json",
+              "ToolTip": "C:\\Users\\dierc\\Downloads\\Ball.com2.postman_collection.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Downloads\\Ball.com2.postman_collection.json",
+              "ViewState": "AQIAACICAAAAAAAAAAAAABQCAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-26T15:10:21.808Z",
               "EditorCaption": ""
             }
           ]
