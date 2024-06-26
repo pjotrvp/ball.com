@@ -44,8 +44,6 @@ namespace CustomerDataService.Controllers
             return Ok(customers);
         }
 
-      
-
 
 
 

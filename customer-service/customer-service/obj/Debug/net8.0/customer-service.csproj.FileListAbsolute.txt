@@ -142,3 +142,6 @@ C:\Users\dierc\OneDrive\Bureaublad\ball.com\ball.com\customer-service\customer-s
 C:\Users\dierc\OneDrive\Bureaublad\ball.com\ball.com\customer-service\customer-service\obj\Debug\net8.0\ref\customer-service.dll
 C:\Users\dierc\OneDrive\Bureaublad\ball.com\ball.com\customer-service\customer-service\bin\Debug\net8.0\RabbitMQ.Client.dll
 C:\Users\dierc\OneDrive\Bureaublad\ball.com\ball.com\customer-service\customer-service\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\dierc\OneDrive\Bureaublad\ball.com\ball.com\customer-service\customer-service\bin\Debug\net8.0\EventStore.ClientAPI.dll
+C:\Users\dierc\OneDrive\Bureaublad\ball.com\ball.com\customer-service\customer-service\bin\Debug\net8.0\protobuf-net.dll
+C:\Users\dierc\OneDrive\Bureaublad\ball.com\ball.com\customer-service\customer-service\bin\Debug\net8.0\protobuf-net.Core.dll
