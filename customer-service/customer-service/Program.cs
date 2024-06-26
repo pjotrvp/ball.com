@@ -1,4 +1,6 @@
 using customer_service.Context;
+using customer_service.EventStore;
+using customer_service.Handlers;
 using customer_service.Interface;
 using customer_service.Models;
 using customer_service.RabbitMQ;
@@ -9,6 +11,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using ProtoBuf.Meta;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -47,6 +50,8 @@ else
 }
 builder.Services.AddScoped<IMessageProducer, RabbitMqProducer>();
 builder.Services.AddTransient<IShoppingCartService, ShoppingCartService>();
+builder.Services.AddSingleton<IEventStoreConnectionProvider, EventStoreConnectionProvider>();
+builder.Services.AddScoped<ICustomerQueryHandlers, CustomerQueryHandlers>(); // Add query handlers
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
