@@ -46,8 +46,9 @@ def initialize_database(app):
         retry_attempts = 5
         for attempt in range(retry_attempts):
             try:
-                db.create_all(bind_key=["write", "read"])
+                db.create_all(bind_key=[None, "read"])
                 logger.info("Succesfully connected to the databases")
+                break
             
             except OperationalError as e:
                 logger.error(f"Failed to connect to the database (attempt {attempt + 1}/{retry_attempts}): {e}")

@@ -17,9 +17,13 @@ def getInvoices():
     else:
         return jsonify({'message': 'No invoices available'}), 404
 
-@invoice_blueprint.route('/<int:invoice_id>', methods=['GET'])
-def getInvoice():
-    return jsonify({"message": "Get invoice/ called"})
+@invoice_blueprint.route('/<int:id>', methods=['GET'])
+def getInvoice(id):
+    invoice = invoice_service.getInvoicesById(id)
+    if invoice:
+        return jsonify({"Invoice": invoice}), 200
+    else:
+        return jsonify({"message": "No invoice with that id found"}), 404
 
 
 @invoice_blueprint.route('/', methods=['POST'])
@@ -32,11 +36,17 @@ def createInvoice():
     return jsonify({'message': f'ID of invoice is {res}'})
 
 
-@invoice_blueprint.route('/<int:invoice_id>', methods=['PUT'])
-def updateInvoice():
-    return jsonify({"message": "Put invoice/:id called"})
+@invoice_blueprint.route('/<int:id>', methods=['PUT'])
+def updateInvoice(id):
+    data = request.json
+    customer_name = data.get('customer_name')
+    amount = data.get('amount')
+    status = data.get('status')
+    res = invoice_service.updateInvoice(id, customer_name, amount, status)
+    return jsonify({'message': f'Change of invoice is {res}'})
 
 
-@invoice_blueprint.route('/<int:invoice_id>', methods=['DELETE'])
-def delInvoice():
-    return jsonify({"message": "Delete invoice called"})
+@invoice_blueprint.route('/<int:id>', methods=['DELETE'])
+def deleteInvoice(id):
+    res = invoice_service.deleteInvoice(id)
+    return jsonify({'message': f'Deletion of invoice with id:{id} was {res}'})

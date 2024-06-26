@@ -27,6 +27,7 @@ class Config:
     RABBITMQ_VHOST = '/'
     RABBITMQ_PORT = 5672
     RABBITMQ_QUEUE = 'Invoice'
+    RABBITMQ_QUEUE_ORDER = 'order_queue'
     RABBITMQ_USER = 'guest'
     RABBITMQ_PASSWORD = 'guest'
 

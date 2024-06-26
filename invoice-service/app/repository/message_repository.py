@@ -3,7 +3,8 @@ import pika # type: ignore
 from app.config import Config
 import time
 from threading import Thread
-
+import json
+import requests
 
 
 class MessageRepository:
@@ -18,7 +19,9 @@ class MessageRepository:
                 )
             )
             self.channel = self.connection.channel()
-            self.channel.queue_declare(queue=Config.RABBITMQ_QUEUE)
+            self.channel.queue_declare(queue=Config.RABBITMQ_QUEUE, durable=True)
+            self.order_channel = self.connection.channel()
+            self.order_channel.queue_declare(queue=Config.RABBITMQ_QUEUE_ORDER, durable=True)
             logging.info("Succesfully established a connection to RabbitMQ")
 
             self.consumer_thread = Thread(target=self.consume_messages)
@@ -43,11 +46,40 @@ class MessageRepository:
     def consume_messages(self):
         def callback(ch, method, properties, body):
             logging.info(f"Received message: {body.decode()}")
+            message_dict = json.loads(body)
+            message_type = message_dict.get("type")
+            if "OrderCreated" in message_type:
+                logging.info("Order Created message received")
+                customerId = message_dict["payload"]["customerId"]
+                orderId = message_dict["payload"]["orderId"]
+                status = "Not paid"
 
-            # Process or handle the received message as needed
-            # Example: call a service method to handle the message
-            # message_service.process_message(body.decode())
 
-        self.channel.basic_consume(queue=Config.RABBITMQ_QUEUE, on_message_callback=callback, auto_ack=True)
+                # Example payload for POST request
+                payload = {
+                    "customerId": customerId,
+                    "orderId": orderId,
+                    "status": status
+                }
+
+                # URL of the Flask endpoint to send the POST request
+                url = "http://localhost:5000/invoice/"
+
+                # Send POST request
+                try:
+                    response = requests.post(url, json=payload)
+
+                    # Check if request was successful
+                    if response.status_code == 200:
+                        logging.info("POST request successful")
+                    else:
+                        logging.error(f"POST request failed with status code {response.status_code}")
+
+                except requests.exceptions.RequestException as e:
+                    logging.error(f"Error sending POST request: {e}")
+
+                
+
+        self.order_channel.basic_consume(queue=Config.RABBITMQ_QUEUE_ORDER, on_message_callback=callback, auto_ack=True)
         logging.info('Consuming messages from RabbitMQ...')
-        self.channel.start_consuming()
+        self.order_channel.start_consuming()
