@@ -35,6 +35,8 @@ def create_app():
 
     return app
 
+
+
 def initialize_database(app):
     logging.basicConfig(level=logging.DEBUG)
     logger = logging.getLogger(__name__)
@@ -47,7 +49,6 @@ def initialize_database(app):
                 db.create_all(bind_key=["write", "read"])
                 logger.info("Succesfully connected to the databases")
             
-
             except OperationalError as e:
                 logger.error(f"Failed to connect to the database (attempt {attempt + 1}/{retry_attempts}): {e}")
                 if attempt < retry_attempts - 1:
@@ -56,18 +57,3 @@ def initialize_database(app):
                     raise
 
 
-def connect_to_rabbitmq():
-    logging.basicConfig(level=logging.DEBUG)
-    logger = logging.getLogger(__name__)
-    retry_attempts = 5
-    for attempt in range(retry_attempts):
-        try:
-            connection = pika.BlockingConnection(pika.ConnectionParameters(host='rabbitmq'))
-            logger.info("Successfully connected to RabbitMQ.")
-            return connection
-        except pika.exceptions.AMQPConnectionError as e:
-            logger.error(f"Failed to connect to RabbitMQ (attempt {attempt + 1}/{retry_attempts}): {e}")
-            if attempt < retry_attempts - 1:
-                time.sleep(5)  # Wait before retrying
-            else:
-                raise

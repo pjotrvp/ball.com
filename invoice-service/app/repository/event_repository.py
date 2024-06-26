@@ -1,5 +1,5 @@
 import uuid
-from esdbclient import (EventStoreDBClient)# type: ignore
+from esdbclient import EventStoreDBClient, NewEvent, StreamState # type: ignore
 import traceback
 from app.config import Config
 import json
@@ -14,14 +14,18 @@ class EventRepository:
         self.client = EventStoreDBClient(connection_string)
         logger.debug("Succesfully connected to eventstore db")
 
-    def append_event(self, stream_name, event_type, data):
+    def append_event(self, stream_name, event_type, event_data):
         event_id = str(uuid.uuid4())
-        event = {
-            'event_id': event_id,
-            'event_type': event_type,
-            'data': data
-        }
-        self.client.append_to_stream(stream_name, [event])
+        logging.basicConfig(level=logging.DEBUG)
+        logger = logging.getLogger(__name__)
+        logger.info(f'self:{self}, stream_name:{stream_name}, event_type:{event_type}, data:{event_data}')
+        event = NewEvent(
+            id= event_id,
+            type= event_type,
+            data= b'{event_data}',
+        )
+        logger.info(f'data:{event.data}')
+        self.client.append_to_stream(stream_name, events=[event], current_version=StreamState.ANY,)
 
     def read_events(self, stream_name):
         events = self.client.read_stream(stream_name)
