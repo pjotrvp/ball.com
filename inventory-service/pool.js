@@ -25,11 +25,11 @@ const seedDatabases = () => {
             console.log('Write database seeded')
         })
 
-        connection.query('TRUNCATE TABLE products', function(error, results, fields) {
-            if (error) throw error
+        // connection.query('TRUNCATE TABLE products', function(error, results, fields) {
+        //     if (error) throw error
 
-            console.log('Table products truncated')
-        })
+        //     console.log('Table products truncated')
+        // })
     })
     
     readPool.getConnection((err, connection) => {
@@ -43,11 +43,11 @@ const seedDatabases = () => {
             console.log('Read database seeded')
         })
 
-        connection.query('TRUNCATE TABLE products', function(error, results, fields) {
-            if (error) throw error
+        // connection.query('TRUNCATE TABLE products', function(error, results, fields) {
+        //     if (error) throw error
 
-            console.log('Table products truncated')
-        })
+        //     console.log('Table products truncated')
+        // })
     })
 }
 
