@@ -55,11 +55,13 @@ namespace customer_service.Controllers
             }
         }
 
-        [HttpPost("customers/{customerId}/shoppingcart/add")]
-        public IActionResult AddToShoppingCart(int customerId, [FromBody] AddProductRequest request)
+        [HttpPost("customers/shoppingcart/add")]
+        public IActionResult AddToShoppingCart([FromBody] AddProductRequest request)
         {
             try
             {
+                var customerId = GetCustomerId();
+
                 _customerService.AddToCart(customerId, request.ProductId);
                 return Ok("Product added to shopping cart successfully.");
             }
@@ -69,11 +71,13 @@ namespace customer_service.Controllers
             }
         }
 
-        [HttpPost("customers/{customerId}/shoppingcart/remove")]
-        public IActionResult RemoveFromShoppingCart(int customerId, [FromBody] AddProductRequest request)
+        [HttpPost("customers/shoppingcart/remove")]
+        public IActionResult RemoveFromShoppingCart([FromBody] AddProductRequest request)
         {
             try
             {
+                var customerId = GetCustomerId();
+
                 _customerService.RemoveFromShoppingCart(customerId, request.ProductId);
                 return Ok("Product removed from shopping cart successfully.");
             }
@@ -83,11 +87,13 @@ namespace customer_service.Controllers
             }
         }
 
-        [HttpPost("customers/{customerId}/shoppingcart/clear")]
-        public IActionResult ClearShoppingCart(int customerId)
+        [HttpPost("customers/shoppingcart/clear")]
+        public IActionResult ClearShoppingCart()
         {
             try
             {
+                var customerId = GetCustomerId();
+
                 _customerService.ClearShoppingCart(customerId);
                 return Ok("Shopping cart cleared successfully.");
             }

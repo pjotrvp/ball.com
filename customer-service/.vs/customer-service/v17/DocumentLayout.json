@@ -7,6 +7,38 @@
       "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\controllers\\shoppingcartcontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\rabbitmq\\connection\\rabbitmqconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\rabbitmq\\connection\\rabbitmqconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\rabbitmq\\rabbitmqproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\rabbitmq\\rabbitmqproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FE43EA2-06FD-44D0-B67C-A6F9BEF816D6}|Subscriber\\Subscriber.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\subscriber\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FE43EA2-06FD-44D0-B67C-A6F9BEF816D6}|Subscriber\\Subscriber.csproj|solutionrelative:subscriber\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\rabbitmq\\connection\\irabbitmqconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\rabbitmq\\connection\\irabbitmqconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\rabbitmq\\imessageproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\rabbitmq\\imessageproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,20 +51,12 @@
       "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\interface\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\services\\shoppingcartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\services\\shoppingcartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\rabbitmq\\connection\\rabbitmqconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\rabbitmq\\connection\\rabbitmqconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,31 +103,7 @@
       "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\Ball.com2.postman_collection.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\rabbitmq\\rabbitmqproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\rabbitmq\\rabbitmqproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4FE43EA2-06FD-44D0-B67C-A6F9BEF816D6}|Subscriber\\Subscriber.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\subscriber\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4FE43EA2-06FD-44D0-B67C-A6F9BEF816D6}|Subscriber\\Subscriber.csproj|solutionrelative:subscriber\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\rabbitmq\\imessageproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\rabbitmq\\imessageproducer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\rabbitmq\\connection\\irabbitmqconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\rabbitmq\\connection\\irabbitmqconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|solutionrelative:customer-service\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2A61C93-DAD0-49C3-971E-E2569728453C}|customer-service\\customer-service.csproj|c:\\users\\dierc\\onedrive\\bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -141,7 +141,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -149,91 +149,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ShoppingCartService.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\ShoppingCartService.cs",
-              "RelativeDocumentMoniker": "customer-service\\Services\\ShoppingCartService.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\ShoppingCartService.cs",
-              "RelativeToolTip": "customer-service\\Services\\ShoppingCartService.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAqwBYAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T23:35:31.695Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "customer-service\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "customer-service\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwEQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T20:22:39.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\CustomerController.cs",
-              "RelativeDocumentMoniker": "customer-service\\Controllers\\CustomerController.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\CustomerController.cs",
-              "RelativeToolTip": "customer-service\\Controllers\\CustomerController.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABAAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T20:22:45.52Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "RabbitMqConnection.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\Connection\\RabbitMqConnection.cs",
               "RelativeDocumentMoniker": "customer-service\\RabbitMQ\\Connection\\RabbitMqConnection.cs",
               "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\Connection\\RabbitMqConnection.cs",
               "RelativeToolTip": "customer-service\\RabbitMQ\\Connection\\RabbitMqConnection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T15:27:47.153Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "customer-service\\Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\AuthService.cs",
-              "RelativeToolTip": "customer-service\\Services\\AuthService.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwDcAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T20:23:49.834Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LoginModel.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\LoginModel.cs",
-              "RelativeDocumentMoniker": "customer-service\\Models\\LoginModel.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\LoginModel.cs",
-              "RelativeToolTip": "customer-service\\Models\\LoginModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T20:23:26.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\CustomerService.cs",
               "RelativeDocumentMoniker": "customer-service\\Services\\CustomerService.cs",
               "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\CustomerService.cs",
               "RelativeToolTip": "customer-service\\Services\\CustomerService.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACsAAAAJAAAA",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAAwH0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-24T20:22:17.207Z",
               "EditorCaption": ""
@@ -246,14 +181,14 @@
               "RelativeDocumentMoniker": "customer-service\\Controllers\\ShoppingCartController .cs",
               "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\ShoppingCartController .cs",
               "RelativeToolTip": "customer-service\\Controllers\\ShoppingCartController .cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAIAAAA",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAkwEkAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T23:38:03.512Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "ShoppingCart.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\ShoppingCart.cs",
               "RelativeDocumentMoniker": "customer-service\\Models\\ShoppingCart.cs",
@@ -266,7 +201,150 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Program.cs",
+              "RelativeDocumentMoniker": "customer-service\\Program.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Program.cs",
+              "RelativeToolTip": "customer-service\\Program.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAYwCwAAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T20:26:18.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\appsettings.json",
+              "RelativeDocumentMoniker": "customer-service\\appsettings.json",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\appsettings.json",
+              "RelativeToolTip": "customer-service\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-24T20:12:12.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\Subscriber\\Program.cs",
+              "RelativeDocumentMoniker": "Subscriber\\Program.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\Subscriber\\Program.cs",
+              "RelativeToolTip": "Subscriber\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:22:02.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IRabbitMqConnection.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\Connection\\IRabbitMqConnection.cs",
+              "RelativeDocumentMoniker": "customer-service\\RabbitMQ\\Connection\\IRabbitMqConnection.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\Connection\\IRabbitMqConnection.cs",
+              "RelativeToolTip": "customer-service\\RabbitMQ\\Connection\\IRabbitMqConnection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:23:03.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "customer-service\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "customer-service\\Controllers\\CustomerController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwBAAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T20:22:45.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "RabbitMqProducer.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\RabbitMqProducer.cs",
+              "RelativeDocumentMoniker": "customer-service\\RabbitMQ\\RabbitMqProducer.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\RabbitMqProducer.cs",
+              "RelativeToolTip": "customer-service\\RabbitMQ\\RabbitMqProducer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:43:45.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "customer-service\\Models\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\LoginModel.cs",
+              "RelativeToolTip": "customer-service\\Models\\LoginModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T20:23:26.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "customer-service\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\AuthService.cs",
+              "RelativeToolTip": "customer-service\\Services\\AuthService.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwDcAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T20:23:49.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "customer-service\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "customer-service\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwEQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T20:22:39.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ShoppingCartService.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\ShoppingCartService.cs",
+              "RelativeDocumentMoniker": "customer-service\\Services\\ShoppingCartService.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Services\\ShoppingCartService.cs",
+              "RelativeToolTip": "customer-service\\Services\\ShoppingCartService.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAqwBYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T23:35:31.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IMessageProducer.cs",
+              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\IMessageProducer.cs",
+              "RelativeDocumentMoniker": "customer-service\\RabbitMQ\\IMessageProducer.cs",
+              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\IMessageProducer.cs",
+              "RelativeToolTip": "customer-service\\RabbitMQ\\IMessageProducer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:43:21.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "ICustomerService.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Interface\\ICustomerService.cs",
               "RelativeDocumentMoniker": "customer-service\\Interface\\ICustomerService.cs",
@@ -279,7 +357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "AuthDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Migrations\\AuthDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "customer-service\\Migrations\\AuthDbContextModelSnapshot.cs",
@@ -292,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "AddProductRequest.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\AddProductRequest.cs",
               "RelativeDocumentMoniker": "customer-service\\Models\\AddProductRequest.cs",
@@ -305,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "IShoppingCartService.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Interface\\IShoppingCartService.cs",
               "RelativeDocumentMoniker": "customer-service\\Interface\\IShoppingCartService.cs",
@@ -318,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "RegisterModel.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\RegisterModel.cs",
               "RelativeDocumentMoniker": "customer-service\\Models\\RegisterModel.cs",
@@ -330,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\Customer.cs",
               "RelativeDocumentMoniker": "customer-service\\Models\\Customer.cs",
@@ -342,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "20240620163811_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Migrations\\20240620163811_InitialCreate.cs",
               "RelativeDocumentMoniker": "customer-service\\Migrations\\20240620163811_InitialCreate.cs",
@@ -355,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "AuthDbContext.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Context\\AuthDbContext.cs",
               "RelativeDocumentMoniker": "customer-service\\Context\\AuthDbContext.cs",
@@ -367,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "products.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\products.cs",
               "RelativeDocumentMoniker": "customer-service\\Models\\products.cs",
@@ -379,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "customer-service\\Models\\ApplicationUser.cs",
@@ -391,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "Ball.com2.postman_collection.json",
               "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\Ball.com2.postman_collection.json",
               "RelativeDocumentMoniker": "..\\Ball.com2.postman_collection.json",
@@ -400,78 +478,6 @@
               "ViewState": "AQIAAAMBAAAAAAAAAAAAABUBAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-06-25T13:07:29.263Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Program.cs",
-              "RelativeDocumentMoniker": "customer-service\\Program.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\Program.cs",
-              "RelativeToolTip": "customer-service\\Program.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAACcAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T20:26:18.075Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\Subscriber\\Program.cs",
-              "RelativeDocumentMoniker": "Subscriber\\Program.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\Subscriber\\Program.cs",
-              "RelativeToolTip": "Subscriber\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T15:22:02.954Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "IRabbitMqConnection.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\Connection\\IRabbitMqConnection.cs",
-              "RelativeDocumentMoniker": "customer-service\\RabbitMQ\\Connection\\IRabbitMqConnection.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\Connection\\IRabbitMqConnection.cs",
-              "RelativeToolTip": "customer-service\\RabbitMQ\\Connection\\IRabbitMqConnection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T15:23:03.601Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "IMessageProducer.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\IMessageProducer.cs",
-              "RelativeDocumentMoniker": "customer-service\\RabbitMQ\\IMessageProducer.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\IMessageProducer.cs",
-              "RelativeToolTip": "customer-service\\RabbitMQ\\IMessageProducer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T15:43:21.576Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "RabbitMqProducer.cs",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\RabbitMqProducer.cs",
-              "RelativeDocumentMoniker": "customer-service\\RabbitMQ\\RabbitMqProducer.cs",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\RabbitMQ\\RabbitMqProducer.cs",
-              "RelativeToolTip": "customer-service\\RabbitMQ\\RabbitMqProducer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T15:43:45.683Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\appsettings.json",
-              "RelativeDocumentMoniker": "customer-service\\appsettings.json",
-              "ToolTip": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\appsettings.json",
-              "RelativeToolTip": "customer-service\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-24T20:12:12.644Z"
             },
             {
               "$type": "Document",
