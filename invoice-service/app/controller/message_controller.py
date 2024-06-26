@@ -7,7 +7,7 @@ message_blueprint = Blueprint('message', __name__)
 app = Flask(__name__)
 message_service = MessageService()
 
-@app.route('/', methods=['POST'])
+@message_blueprint.route('/send', methods=['POST'])
 def send_message():
     data = request.json
     message = data.get('message')
@@ -17,13 +17,10 @@ def send_message():
     except ValueError as e:
         return jsonify({'error': str(e)}), 400
 
-@app.route('/receive', methods=['GET'])
+@message_blueprint.route('/receive', methods=['GET'])
 def receive_message():
     message = message_service.receive_message()
     if message:
         return jsonify({'message': message}), 200
     else:
         return jsonify({'message': 'No message available'}), 404
-
-if __name__ == '__main__':
-    app.run(debug=True)
