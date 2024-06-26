@@ -7,17 +7,19 @@ namespace customer_service.RabbitMQ.Connection
         private IConnection? _connection;
         public IConnection Connection => _connection!;
 
-        public RabbitMqConnection()
+        public RabbitMqConnection(string host)
         {
-            InitializeConnection();
+            InitializeConnection(host);
         }
 
-        private void InitializeConnection()
+        private void InitializeConnection(string host)
         {
             var factory = new ConnectionFactory
             {
-                HostName = "localhost",
-                
+
+                HostName = host, // Use the service name defined in docker-compose.yml
+                UserName = "guest",
+                Password = "guest"
 
 
 
