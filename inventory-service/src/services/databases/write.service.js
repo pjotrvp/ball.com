@@ -49,6 +49,10 @@ async function updateProduct(id, body) {
             });
         });
 
+        const payload = { id, name, description, price, stock };
+
+        eventStore.appendToStream(`inventory-stream`, "ProductUpdated", payload);
+
         const command = { type: 'ProductUpdated', payload: { id, name, description, price, stock } };
         publisher.publish(command);
     } catch (error) {
@@ -69,7 +73,11 @@ async function deleteProduct(id) {
             });
         });
 
-        const command = { type: 'ProductDeleted', payload: { id } };
+        const payload = { id };
+
+        eventStore.appendToStream(`inventory-stream`, "ProductDeleted", payload);
+
+        const command = { type: 'ProductDeleted', payload };
         publisher.publish(command);
     } catch (error) {
         throw error;
@@ -89,7 +97,11 @@ async function lowerStockOfProductsInOrder(order) {
 
                     resolve(results);
 
-                    const command = { type: 'ProductStockLowered', payload: { id: product.id, quantity: product.quantity } };
+                    const payload = { id: product.id, quantity: product.quantity };
+
+                    eventStore.appendToStream(`inventory-stream`, "ProductStockLowered", payload);
+
+                    const command = { type: 'ProductStockLowered', payload };
                     publisher.publish(command);
                 });
             });
