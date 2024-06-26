@@ -11,6 +11,8 @@ namespace customer_service.Context
         {
         }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<ShoppingCart> ShoppingCart { get; set; }
+
 
     }
 }

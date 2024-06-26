@@ -37,6 +37,7 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddSingleton<IRabbitMqConnection>(new RabbitMqConnection());
 builder.Services.AddScoped<IMessageProducer, RabbitMqProducer>();
+builder.Services.AddTransient<IShoppingCartService, ShoppingCartService>();
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {

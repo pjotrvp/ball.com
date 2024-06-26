@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tC9e7d9h2mo=",
+  "dgSpecHash": "674SrkDY5/o=",
   "success": true,
   "projectFilePath": "C:\\Users\\dierc\\OneDrive\\Bureaublad\\ball.com\\ball.com\\customer-service\\customer-service\\customer-service.csproj",
   "expectedPackageFiles": [
@@ -54,6 +54,7 @@
     "C:\\Users\\dierc\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\dierc\\.nuget\\packages\\mysql.data\\8.4.0\\mysql.data.8.4.0.nupkg.sha512",
     "C:\\Users\\dierc\\.nuget\\packages\\mysql.entityframeworkcore\\8.0.2\\mysql.entityframeworkcore.8.0.2.nupkg.sha512",
+    "C:\\Users\\dierc\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\dierc\\.nuget\\packages\\rabbitmq.client\\6.8.1\\rabbitmq.client.6.8.1.nupkg.sha512",
     "C:\\Users\\dierc\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\dierc\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",

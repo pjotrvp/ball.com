@@ -2,7 +2,11 @@
 {
     public class ShoppingCart
     {
+        public int ShoppingCartId { get; set; }
         public int CustomerId { get; set; }
-        public List<Product> Products { get; set; } = new List<Product>();
+        public string ProductsIds { get; set; } // JSON string to store products
+
+        // Navigation property for customer (if needed)
+        //public Customer Customer { get; set; }
     }
 }
