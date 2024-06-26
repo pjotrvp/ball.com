@@ -49,6 +49,10 @@ async function updateProduct(id, body) {
             });
         });
 
+        const payload = { id, name, description, price, stock };
+
+        eventStore.appendToStream(`inventory-stream`, "ProductUpdated", payload);
+
         const command = { type: 'ProductUpdated', payload: { id, name, description, price, stock } };
         publisher.publish(command);
     } catch (error) {
@@ -69,7 +73,11 @@ async function deleteProduct(id) {
             });
         });
 
-        const command = { type: 'ProductDeleted', payload: { id } };
+        const payload = { id };
+
+        eventStore.appendToStream(`inventory-stream`, "ProductDeleted", payload);
+
+        const command = { type: 'ProductDeleted', payload };
         publisher.publish(command);
     } catch (error) {
         throw error;
@@ -83,13 +91,17 @@ async function lowerStockOfProductsInOrder(order) {
     try {
         for (const product of products) {
             await new Promise((resolve, reject) => {
-                writePool.query(query, [product.quantity, product.productId], (error, results) => {
+                writePool.query(query, [product.quantity, product.id], (error, results) => {
                     if (error) return reject(error);
-                    if (results.affectedRows < 1) return reject(new Error(`Product not found: ${product.productId}`));
+                    if (results.affectedRows < 1) return reject(new Error(`Product not found: ${product.id}`));
 
                     resolve(results);
 
-                    const command = { type: 'ProductStockLowered', payload: { id: product.productId, quantity: product.quantity } };
+                    const payload = { id: product.id, quantity: product.quantity };
+
+                    eventStore.appendToStream(`inventory-stream`, "ProductStockLowered", payload);
+
+                    const command = { type: 'ProductStockLowered', payload };
                     publisher.publish(command);
                 });
             });

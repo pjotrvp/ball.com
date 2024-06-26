@@ -35,8 +35,18 @@ else
 
 builder.Services.AddControllers();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
-builder.Services.AddSingleton<IRabbitMqConnection>(new RabbitMqConnection());
+if (aspNetCoreEnvironment == "Development")
+{
+    builder.Services.AddSingleton<IRabbitMqConnection>(new RabbitMqConnection("rabbitmq"));
+
+}
+else
+{
+    builder.Services.AddSingleton<IRabbitMqConnection>(new RabbitMqConnection("localhost"));
+
+}
 builder.Services.AddScoped<IMessageProducer, RabbitMqProducer>();
+builder.Services.AddTransient<IShoppingCartService, ShoppingCartService>();
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {

@@ -127,7 +127,6 @@ class RabbitMQReadConsumer {
         }
 
         const orderQueue = "order_queue";
-        const inventoryQueue = "inventory_queue";
         const readQueue = "order_replication_queue";
 
         channel.assertQueue(readQueue, {
@@ -136,12 +135,8 @@ class RabbitMQReadConsumer {
         channel.assertQueue(orderQueue, {
           durable: true,
         });
-        channel.assertQueue(inventoryQueue, {
-          durable: true,
-        });
 
         console.log("[R | <=] Waiting for messages in %s", orderQueue);
-        console.log("[R | <=] Waiting for messages in %s", inventoryQueue);
         console.log("[R | <=] Waiting for messages in %s", readQueue);
 
         this.startConsuming(channel);

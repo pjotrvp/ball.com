@@ -8,11 +8,13 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CustomerDataService.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class CustomerController : ControllerBase
     {
         private readonly ICustomerService _customerService;
@@ -42,16 +44,7 @@ namespace CustomerDataService.Controllers
             return Ok(customers);
         }
 
-        [HttpPost("{id}/cart")]
-        public ActionResult AddToCart(int id, [FromBody] Product product)
-        {
-            _customerService.AddToCart(id, product);
-            return NoContent();
-        }
-
-
-
-
+      
 
 
 
