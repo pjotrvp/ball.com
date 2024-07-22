@@ -108,6 +108,7 @@ module.exports = {
 
     console.log(query);
 
+    //send the SQL query to the queue. eventual consistency.
     rabbitMQManager.addMessage(query);
     const command = {
       type: "OrderCreated",
@@ -118,7 +119,8 @@ module.exports = {
         products,
       },
     };
-    rabbitMQManager.addRegularMessage(command);
+    
+    //message to the inventory queue
     rabbitMQManager.addInventoryMessage(command);
     return res.status(201).json({
       message: "Successfully created order",
