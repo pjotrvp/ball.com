@@ -86,6 +86,31 @@ services:
       RABBITMQ_USER: guest
       RABBITMQ_PASSWORD: guest
 
+  customer-service-sec:
+    networks:
+      - ballcom
+    build: ./customer-service-sec
+    container_name: customer-service-sec
+    restart: always
+    ports:
+      - 3001:3001
+    depends_on:
+      - mysql-write
+      - mysql-read
+      - rabbitmq
+      - eventstoredb
+    environment:
+      NODE_ENV: production
+      MYSQL_HOST: mysql-write
+      MYSQL_PORT: 3306
+      MYSQL_USER: administrator
+      MYSQL_PASSWORD: password420
+      MYSQL_DATABASE: ballcom
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      RABBITMQ_USER: guest
+      RABBITMQ_PASSWORD: guest
+
   inventory-service:
     networks:
       - ballcom
@@ -113,14 +138,14 @@ services:
 
   invoice-service:
     networks:
-     - ballcom
+      - ballcom
     build:
-     context: .
-     dockerfile: ./invoice-service/Dockerfile
+      context: .
+      dockerfile: ./invoice-service/Dockerfile
     container_name: invoice-service
     restart: always
     ports:
-     - 5000:5000
+      - 5000:5000
     depends_on:
       - mysql-write
       - mysql-read
@@ -138,15 +163,15 @@ services:
 
   customer-service:
     networks:
-     - ballcom
+      - ballcom
     build:
-     context: .
-     dockerfile: ./customer-service/customer-service/Dockerfile
+      context: .
+      dockerfile: ./customer-service/customer-service/Dockerfile
     container_name: customer-service
     restart: always
     ports:
-     - 8080:8080
-     - 8081:8181
+      - 8080:8080
+      - 8081:8181
     depends_on:
       - mysql-write
       - mysql-read
@@ -163,7 +188,6 @@ services:
       RABBITMQ_PORT: 5672
       RABBITMQ_USER: guest
       RABBITMQ_PASSWORD: guest
-
 
 volumes:
   mysql-write:

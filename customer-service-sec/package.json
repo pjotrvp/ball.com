@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@eventstore/db-client": "^6.2.1",
+    "amqplib": "^0.10.4",
+    "axios": "^1.7.4",
+    "csv": "^6.3.10",
+    "csvtojson": "^2.0.10",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.0",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "sequelize": "^6.37.3",
+    "uuid": "^10.0.0"
+  }
+}
