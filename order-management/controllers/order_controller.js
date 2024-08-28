@@ -95,18 +95,19 @@ module.exports = {
       },
     ];
     
-    eventStoreManager.appendToStream(`Order-${orderId}`, "OrderCreated", {
+    await eventStoreManager.appendToStream(`Order-${orderId}`, "OrderCreated", {
       orderId,
       customerId,
       orderDate: dateAndTimeISO,
       products,
     });
 
+    const events = await eventStoreManager.readFromStream(`Order-${orderId}`);
+    console.log(events);
+
     const query = `INSERT INTO Orders (orderId, customerId, orderDate, products) VALUES ('${orderId}', '${customerId}', '${dateAndTimeISO}','${JSON.stringify(
       products
     )}');`;
-
-    console.log(query);
 
     //send the SQL query to the queue. eventual consistency.
     rabbitMQManager.addMessage(query);

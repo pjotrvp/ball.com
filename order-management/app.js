@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 
 const RabbitMQConsumer = require("./rabbitmq/rabbitMQ_consumer");
 const RabbitMQRead = require("./rabbitmq/rabbitMQ_read");
-
+const eventStoreMan   = require("./eventstore/eventstore_manager");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -23,6 +23,7 @@ app.listen(port, () => {
   const read = new RabbitMQRead();
   read.listenToReadQueue();
 
+  eventStoreMan.verifyConnection();
   console.log(`Server running at http://localhost:${port}`);
 });
 

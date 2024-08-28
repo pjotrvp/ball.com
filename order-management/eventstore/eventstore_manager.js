@@ -23,6 +23,18 @@ async function subscribeToStream() {
   }
 }
 
+async function verifyConnection() {
+  try {
+    const info = await client.readAll({
+      direction: FORWARDS,
+      fromPosition: "start",
+    });
+    console.log("Successfully connected to EventStoreDB");
+  } catch (error) {
+    console.error("Failed to connect to EventStoreDB:", error);
+  }
+}
+
 async function appendToStream(stream, eventName, eventData) {
   const event = jsonEvent({ type: eventName, data: eventData });
   await client.appendToStream(stream, [event]);
@@ -53,4 +65,5 @@ module.exports = {
   appendToStream,
   readFromStream,
   getSpecificEvents,
+  verifyConnection,
 };
